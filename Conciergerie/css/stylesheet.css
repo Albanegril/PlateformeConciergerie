@@ -1,0 +1,47 @@
+h4, h5, h6
+{
+	text-align: center;
+}
+
+body
+{
+	background-image: url(images/fondAutre_v1.png) !important;
+}
+
+a
+{
+	display: inline-block; 
+	  width: auto;
+}
+
+.card-image {   
+  width: auto;
+  display: inline-block;    
+}
+
+.card-image img {
+  width: 30%; /* Will shrink image to 30% of its original width */
+  height: auto;    
+}​
+
+.BtnSearch{
+	justify-content: center;
+}
+
+header, footer
+{
+	background-color: #f29500 !important;
+	/*width: 100%;*/
+	padding: 10px 0px 10px 0px;
+	justify-content: space-between !important;
+
+	position: relative;
+    right: 0;
+    left: 0;
+}
+
+.navbar
+{
+	background-color: orange; 
+}
+
