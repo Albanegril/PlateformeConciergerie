@@ -50,8 +50,16 @@
             </select>
           </div>
 
-          <!-- /!\ ne s'affiche pas ! installer node.js ? -->
-          <div class="row"> 
+         
+          <div class="row">
+            <div class="col l6 offset-l3 s12">
+              <form action="#">
+                <p class="range-field">
+                  <input type="range" id="test5" min="0" max="100" />
+                </p>
+              </form>
+            </div>
+             <!-- /!\ ne s'affiche pas ! installer node.js ? -->
             <div id="prix-slider"></div>       
           </div>
 

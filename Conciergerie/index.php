@@ -8,6 +8,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href="extras/noUiSlider/nouislider.css" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
 
     </head>
@@ -25,8 +26,11 @@
 
       <?php include_once ("footer.php"); ?>
 
+      <!--JAVASCRIPT-->
+
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
 
       <script>
         M.AutoInit();

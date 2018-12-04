@@ -14,7 +14,6 @@
 
     <body>
       <?php include_once ("header.php"); ?>
-      <?php include_once ("navbar.php"); ?>
 
                 <div class="container" id="Product">
                   <div class="row">
