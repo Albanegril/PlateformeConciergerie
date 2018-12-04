@@ -58,15 +58,14 @@
                     <div class="col s1">
                       <br>
                         <a href="#">
-                        <!--<img src="">-->
-                        <h9>logo marque</h9>
-                      </a>            
+                        <img src="#" alt="logo marque">
+                        </a>            
                     </div>  
                     <div class="col s1">
                       <br>
                         <a href="#">
-                        <!--<img src="">-->
-                        <h9>logo fournisseur</h9>
+                        <img src="#" alt="logo fournisseur">
+                        </a>
                       </a>            
                     </div>   
                 
