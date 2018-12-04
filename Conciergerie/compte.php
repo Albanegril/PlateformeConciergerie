@@ -23,11 +23,11 @@
               </div>
             </div>
 
-            <h5>Bonjour Pseudo</h5>
-            <h6>Nom : nom</h6>
+            <h5>Hello Pseudo</h5>
+            <h6>Name : name</h6>
             <hr/> <br>
             <form method="post" action="traitementMdp.php" class="formulaire">
-              <span>Modifier le mot de passe : </span>
+              <span>Change Passxord : </span>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="password" type="password" class="validate">

@@ -13,6 +13,7 @@
     </head>
 
     <body>
+      <?php session_start();?>
 
           <div class="container-fluid" id="Connexion">
 
@@ -22,11 +23,11 @@
                 <div class="card darken-1">
                   <div class="card-image">
                     <br>
-                    <img src="images/user.png" width="100px">
+                    <img src="images/user.png" id="Avatar" width="100px">
                   </div>
 
                   <div class="card-content white-text">
-                    <form method="post" action="traitementConnexion.php" class="formulaire">
+                    <form method="post" action="#" class="formulaire">
                       <div class="input-field col">
                         <input id="pseudo" type="text" class="validate" name="pseudo">
                         <label for="pseudo">Pseudo</label>
@@ -44,6 +45,10 @@
             </div>
                  
           </div>
+          
+      <script>
+        M.AutoInit();
+      </script>
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
