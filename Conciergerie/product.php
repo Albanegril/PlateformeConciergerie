@@ -16,7 +16,7 @@
       <?php include_once ("header.php"); ?>
       <?php include_once ("navbar.php"); ?>
 
-          <div class="container" id="Product">
+                <div class="container" id="Product">
                   <div class="row">
                     <div class="col s6">
                       <div class="card small">
@@ -70,28 +70,25 @@
                       </a>            
                     </div>   
                 
-                  <table>
-                    <thead>
-                        <tr>
-                          <th>Brut</th>
-                          <th>Livaison</th>
-                          <th>NetTask</th>
+                    <table>
+                      <thead>
+                          <tr>
+                            <th>Brut</th>
+                            <th>Livaison</th>
+                            <th>NetTask</th>
+                        </tr>
+                      </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>52</td>
+                        <td>25</td>
+                        <td>36</td>
                       </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td>52</td>
-                      <td>25</td>
-                      <td>36</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-            </div>
-          </div>     
-          </div>
-
+                    </tbody>
+                  </table>
+                </div>
+              </div>     
       <?php include_once ("footer.php"); ?>
 
       <!--JavaScript at end of body for optimized loading-->
