@@ -5,13 +5,13 @@ h4, h5, h6
 
 #Connexion
 {
-	background-image: url(images/fondAutre_v1.png) !important;
-}
+	background-image: url(../images/fondAutre_v1.png);
+	background-position: center center;
 
-a
-{
-	display: inline-block; 
-	  width: auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+
 }
 
 .card-image {   
@@ -30,10 +30,12 @@ a
 
 header, footer
 {
+	display: flex !important;
+	flex-direction: row;
 	background-color: #f29500 !important;
 	/*width: 100%;*/
 	padding: 10px 0px 10px 0px;
-	justify-content: space-between !important;
+	justify-content: space-around !important;
 
 	position: relative;
     right: 0;

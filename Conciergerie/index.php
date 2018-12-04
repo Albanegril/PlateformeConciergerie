@@ -36,7 +36,6 @@
 
     <body>
       <?php include_once ("header.php"); ?>
-      <?php include_once ("navbar.php"); ?>
 
       <div class="container">
         <?php include_once ("research.php"); ?>

@@ -1,17 +1,27 @@
 <?php if (isset($_SESSION['num'])): ?>
-    <header>
-      <div class="container-fluid">
-        <a href="index.php" align="left" class="logo" ><img src="images/Logo.png" alt="NotreLogo" width="200px"/></a>
-        <a href="deconnexion.php" class="waves-effect waves-light btn">DECONNEXION</a>
+    <nav>
+      <div class="nav-wrapper navbar">
+        <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="100px"/></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#Recherche">Recherche</a></li>
+          <li><a href="#Resultats">Resultats</a></li>
+          <li><a href="#Compte">Compte</a></li>
+          <li><a href="deconnexion.php" class="waves-effect waves-light btn">DECONNEXION</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
 <?php else: ?>
-    <header>
-      <div class="container-fluid">
-        <a href="index.php" align="left" class="logo" ><img src="images/Logo.png" alt="NotreLogo" width="200px"/></a>
-        <a href="connexion.php" class="waves-effect waves-light btn" >CONNEXION</a>
+    <nav>
+      <div class="nav-wrapper navbar">
+        <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="100px"/></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#Recherche">Recherche</a></li>
+          <li><a href="#Resultats">Resultats</a></li>
+          <li><a href="#Compte">Compte</a></li>
+          <li><a href="connexion.php" class="waves-effect waves-light btn" >CONNEXION</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
 <?php endif ?>

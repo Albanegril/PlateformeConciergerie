@@ -14,7 +14,7 @@
 
     <body>
 
-          <div id="Connexion">
+          <div class="container-fluid" id="Connexion">
 
             <div class="row">
               <div class="col s10 offset-s1 m3 offset-m6">
