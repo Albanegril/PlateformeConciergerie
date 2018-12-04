@@ -48,6 +48,11 @@ body
   display: inline-block;    
 }
 
+/* Product */
+ #ImgItem
+ {
+ 	size: cover;
+ }
 
 
 

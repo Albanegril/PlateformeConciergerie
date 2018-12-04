@@ -14,7 +14,7 @@
     </head>
 
     <body>
-      <?php session_start();?>
+      <?php include_once ("initialisation.php"); ?>
       <?php include_once ("header.php"); ?>
 
       <div class="container">
@@ -26,7 +26,7 @@
 
       <?php include_once ("footer.php"); ?>
 
-      <!--JAVASCRIPT-->
+     <!--JAVASCRIPT-->
 
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -58,6 +58,13 @@
            })
           });
       </script>
+
+      <script>
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });
+      </script>
+
 
     </body>
   </html>
