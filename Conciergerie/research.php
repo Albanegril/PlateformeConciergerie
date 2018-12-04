@@ -3,7 +3,7 @@
 
     <div class="row">
       
-      <form method="post" action="traitement.php">
+      <form method="post" action="#">
         <div class="row">
           <div class="col s6 offset-s3">
             <div class="row">
@@ -16,11 +16,9 @@
           </div>
         </div>
 
-        <div id="prix-slider"></div>
-
         <div class="row">
           <div class="input-field col s2 offset-s1">
-            <select class="browser-default">
+            <select multiple>
               <option value="" disabled selected>Change</option>
               <option value="1">Dollars</option>
               <option value="2">Euros</option>
@@ -28,7 +26,7 @@
           </div>
 
           <div class="input-field col s2 offset-s1">
-            <select class="browser-default">
+            <select multiple>
               <option value="" disabled selected>Type</option>
               <option value="1">Dior</option>
               <option value="2">YSL</option>
@@ -37,7 +35,7 @@
         
 
           <div class="input-field col s2 offset-s1">
-            <select class="browser-default">
+            <select multiple>
               <option value="" disabled selected>Brand</option>
               <option value="1">Dior</option>
               <option value="2">YSL</option>
@@ -45,15 +43,20 @@
           </div>
 
          <div class="input-field col s2 offset-s1">
-            <select class="browser-default">
+            <select multiple>
               <option value="" disabled selected>Shop</option>
               <option value="1">Sephora</option>
               <option value="2">Nocibé</option>
             </select>
           </div>
 
+          <!-- /!\ ne s'affiche pas ! installer node.js ? -->
+          <div class="row"> 
+            <div id="prix-slider"></div>       
+          </div>
+
           <div class="col offset-s5">
-            <input type="submit" value="Research" class="waves-effect waves-light btn BtnSearch"/>
+            <input type="submit" value="Research" class="waves-effect waves-light btn"/>
           </div>
         </form>
       </div>

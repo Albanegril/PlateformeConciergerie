@@ -23,7 +23,7 @@
                 <div class="card darken-1">
                   <div class="card-image">
                     <br>
-                    <img src="images/user.png" id="Avatar" width="100px">
+                    <img src="images/user.png" width="100px">
                   </div>
 
                   <div class="card-content white-text">
@@ -45,7 +45,7 @@
             </div>
                  
           </div>
-          
+
       <script>
         M.AutoInit();
       </script>

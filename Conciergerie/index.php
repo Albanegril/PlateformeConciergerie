@@ -10,8 +10,32 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
 
+    </head>
+
+    <body>
+      <?php session_start();?>
+      <?php include_once ("header.php"); ?>
+
+      <div class="container">
+        <?php include_once ("research.php"); ?>
+        <br>
+
+        <?php include_once ("resultat.php"); ?>
+      </div>
+
+      <?php include_once ("footer.php"); ?>
+
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+
       <script>
         M.AutoInit();
+      </script>
+
+      <script>
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
       </script>
 
       <script type="text/javascript">
@@ -31,23 +55,5 @@
           });
       </script>
 
-
-    </head>
-
-    <body>
-      <?php session_start();?>
-      <?php include_once ("header.php"); ?>
-
-      <div class="container">
-        <?php include_once ("research.php"); ?>
-        <br>
-
-        <?php include_once ("resultat.php"); ?>
-      </div>
-
-      <?php include_once ("footer.php"); ?>
-
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
   </html>
