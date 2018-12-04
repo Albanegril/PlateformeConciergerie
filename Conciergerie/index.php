@@ -10,7 +10,7 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
 
-      <script type="text/javascript">
+      <script>
         M.AutoInit();
       </script>
 
@@ -39,7 +39,7 @@
       <?php include_once ("navbar.php"); ?>
 
       <div class="container">
-        <?php include_once ("recherche.php"); ?>
+        <?php include_once ("research.php"); ?>
         <br>
 
         <?php include_once ("resultat.php"); ?>
