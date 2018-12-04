@@ -52,6 +52,9 @@
 
          
           <div class="row">
+            <div class="col l2 s12">
+              <label>Prize Range</label>
+            </div>
             <div class="col l6 offset-l3 s12">
               <form action="#">
                 <p class="range-field">
