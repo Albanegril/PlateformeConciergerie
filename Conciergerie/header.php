@@ -5,7 +5,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#Recherche">Recherche</a></li>
           <li><a href="#Resultats">Resultats</a></li>
-          <li><a href="#Compte">Compte</a></li>
+          <li><a href="compte.php">Compte</a></li>
           <li><a href="deconnexion.php" class="waves-effect waves-light btn">DECONNEXION</a></li>
         </ul>
       </div>
@@ -18,7 +18,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#Recherche">Recherche</a></li>
           <li><a href="#Resultats">Resultats</a></li>
-          <li><a href="#Compte">Compte</a></li>
+          <li><a href="compte.php">Compte</a></li>
           <li><a href="connexion.php" class="waves-effect waves-light btn" >CONNEXION</a></li>
         </ul>
       </div>

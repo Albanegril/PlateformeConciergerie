@@ -14,7 +14,6 @@
 
     <body>
       <?php include_once ("header.php"); ?>
-      <?php include_once ("navbar.php"); ?>
 
           <div class="container" id="Compte">
             <div class="row">
@@ -27,7 +26,7 @@
             <h6>Name : name</h6>
             <hr/> <br>
             <form method="post" action="traitementMdp.php" class="formulaire">
-              <span>Change Passxord : </span>
+              <h6>Change Password : </h6>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="password" type="password" class="validate">
