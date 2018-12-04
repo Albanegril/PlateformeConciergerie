@@ -7,7 +7,7 @@
 
     <div class="row">
       <form>
-        <div class="input-field col s12">
+        <div class="input-field col s4 offset-s8">
           <select>
             <option value="" disabled selected>Choose the order</option>
             <option value="1">By prize</option>
