@@ -27,7 +27,7 @@
             <p>Item 1</p>
           </div>
           <div class="card-action">
-            <a href="#">Link to page item</a>
+            <a href="product.php">Link to page item</a>
           </div>
         </div>
       </div>
