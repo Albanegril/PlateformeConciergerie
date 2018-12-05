@@ -1,4 +1,4 @@
-<div id="Formulaire" class="Formulaire">
+<div id="Formulaire" class="card-panel Formulaire">
   <h4>Forms</h4>
 
     <div class="row">

@@ -14,11 +14,12 @@
 
     </head>
 
-    <body>
+    <body class=" teal lighten-4">
       <?php include_once ("initialisation.php"); ?>
       <?php include_once ("header.php"); ?>
 
       <div class="container">
+        <br>
         <?php include_once ("research.php"); ?>
         <br>
 

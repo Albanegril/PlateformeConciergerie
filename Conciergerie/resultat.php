@@ -1,4 +1,4 @@
-<div class="container" id="Resultat">
+<div class="card-panel" id="Resultat">
 
     <div class="row">
       <form>

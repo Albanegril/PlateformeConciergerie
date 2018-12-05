@@ -12,11 +12,12 @@
 
     </head>
 
-    <body>
+    <body class=" teal lighten-4">
       <?php include_once ("header.php"); ?>
       
-
-        <div class="container" id="Fournisseur">
+      <div class="container">
+        
+        <div class="card-panel teal lighten-2" id="Fournisseur">
           
             <h4 class="center">Fiche fournisseur</h4>
               
@@ -98,6 +99,9 @@
               </div>
             </div>
           -->
+        
+      </div>
+        
 
           </div>
           <!--

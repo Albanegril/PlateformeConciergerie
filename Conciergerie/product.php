@@ -12,13 +12,13 @@
 
     </head>
 
-    <body>
+    <body class=" teal lighten-4">
       <?php include_once ("initialisation.php"); ?>
       <?php include_once ("header.php"); ?>
 
-          <div class="container" id="Product">
+          <div class="container">
 
-              <div class="card-panel green lighten-4">
+              <div class="card-panel teal lighten-2"  id="Product">
 
                   <div class="row">
                    <div class="col offset-l1 l10 s12">
@@ -32,7 +32,7 @@
                     <div class="col l5 s10" >
 
                       <h4>Nom produit</h4>
-                      <h6 class="grey-text">code258-25</h6>
+                      <h6 class="white-text">code258-25</h6>
                     
                       <div class="Horizontale">  
                         <div>
