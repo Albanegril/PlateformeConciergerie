@@ -19,6 +19,7 @@
         <div class="container" id="Fournisseur">
           
               <h3 class="center">Fiche fournisseur</h3>
+              
               <div class="row">
               <form>
                 <div class="input-field col s4 offset-s8">
@@ -31,10 +32,12 @@
               </form>
             </div>
 
-            <div class="col s8 m5">
+            <div class="purple darken-4 row">
+
+            <div class="col s12 m12">
               <div class="card horizontal">
                 <div class="card-image">
-                  <img src="image/scandal.jpeg">
+                  <img src="images/scandal.jpeg">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
@@ -47,7 +50,7 @@
               </div>
             </div>
 
-            <div class="col s8 m7">
+            <div class="col s12 m12">
               <div class="card horizontal">
                 <div class="card-image">
                   <img src="https://lorempixel.com/100/190/nature/6">
@@ -63,7 +66,7 @@
               </div>
             </div>
 
-            <div class="col s8 m7">
+            <div class="col s12 m12">
               <div class="card horizontal">
                 <div class="card-image">
                   <img src="https://lorempixel.com/100/190/nature/6">
@@ -78,10 +81,10 @@
                 </div>
               </div>
             </div>
-
+            </div>
             <a class="btn" id="bouton_texte" onclick="afficher_cacher('texte');">Afficher plus</a>
     
-            <div class="col s8 m7 texte" id="texte">
+            <div class="col s12 m12 texte" id="texte">
               <div class="card horizontal">
                 <div class="card-image">
                   <img src="https://lorempixel.com/100/190/nature/6">
@@ -101,9 +104,9 @@
               <a class="btn-floating btn red">
                 <i class="large material-icons">arrow_drop_up</i>
               </a></div>
-          </div>
-
           
+        
+        </div>
         </div>
       <?php include_once ("footer.php"); ?>
 

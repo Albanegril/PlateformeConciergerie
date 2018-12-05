@@ -63,11 +63,11 @@
                     <div class="col s2 optionv" >
                       <br>
                         <a href="marque.php">
-                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                        <img id="image" src="images/vuitton.png" alt="logo marque" class="circle responsive-img">
                         </a>            
                         <br>
                         <a href="fournisseur.php">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur" class="circle responsive-img">
                         </a>      
                     </div>   
 
