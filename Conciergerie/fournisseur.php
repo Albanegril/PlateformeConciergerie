@@ -18,9 +18,9 @@
 
         <div class="container" id="Fournisseur">
           
-              <h3 class="center">Fiche fournisseur</h3>
+            <h4 class="center">Fiche fournisseur</h4>
               
-              <div class="row">
+            <div class="row">
               <form>
                 <div class="input-field col s4 offset-s8">
                   <select>
@@ -32,7 +32,7 @@
               </form>
             </div>
 
-            <div class="purple darken-4 row">
+          <div class="card-panel">
 
             <div class="col s12 m12">
               <div class="card horizontal">
@@ -44,7 +44,7 @@
                     <p>Item 1</p>
                   </div>
                   <div class="card-action">
-                    <a href="#">Link to page item</a>
+                    <a href="product.php">Link to page item</a>
                   </div>
                 </div>
               </div>
@@ -81,9 +81,7 @@
                 </div>
               </div>
             </div>
-            </div>
-            <a class="btn" id="bouton_texte" onclick="afficher_cacher('texte');">Afficher plus</a>
-    
+          <!--
             <div class="col s12 m12 texte" id="texte">
               <div class="card horizontal">
                 <div class="card-image">
@@ -99,14 +97,19 @@
                 </div>
               </div>
             </div>
+          -->
 
-              <div class="fixed-action-btn" id="myBtn" onclick="topFunction()">
-              <a class="btn-floating btn red">
+          </div>
+          <!--
+          <a class="btn" id="bouton_texte" onclick="afficher_cacher('texte');">Afficher plus</a>
+          -->
+
+          <div class="fixed-action-btn" id="myBtn" onclick="topFunction()">
+            <a class="btn-floating btn red">
                 <i class="large material-icons">arrow_drop_up</i>
-              </a></div>
-          
+            </a>
+          </div>
         
-        </div>
         </div>
       <?php include_once ("footer.php"); ?>
 
@@ -116,17 +119,16 @@
       <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
       <script type="text/javascript" src="js/topF.js"></script>
       <script type="text/javascript" src="js/afficherPlus.js"></script>
+
       <script>
         M.AutoInit();
       </script>
 
       <script type="text/javascript">
-    //<!--
-        afficher_cacher('texte');
-    //-->
-    </script>
-
-      
+      //<!--
+          afficher_cacher('texte');
+      //-->
+      </script>
      
     </body>
   </html>

@@ -43,9 +43,22 @@ body
 
 }
 
-.optionv{
+.card-image {   
+  width: auto;
+  display: inline-block;    
+}
+
+/* Product */
+
+#Product
+{
+	justify-content: space-around;
+}
+
+.margeTop{
 	margin-top: 50px;
 }
+
 .alignement{
 	display: block;
     margin-left: auto;
@@ -53,17 +66,17 @@ body
     margin-top:50px; 
 
 }
+
+.Horizontale
+{
+	display: flex;
+	flex-direction: row;
+}
+
 #myBtn{
 	display: none;
 }
-.table1{
-	background-color: #FAFAFA;
-	margin-top: 20px;
 
-}
-#classrow{
-	margin-left: 110px;
-}
 #image{
 	width: 50px;
 	height: 50px;
@@ -72,16 +85,9 @@ body
 #device{
 	width: 50px;
 }
-.card-image {   
-  width: auto;
-  display: inline-block;    
-}
 
-/* Product */
- #ImgItem
- {
- 	size: cover;
- }
+
+
 
 
 

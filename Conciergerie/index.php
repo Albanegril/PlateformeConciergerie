@@ -7,8 +7,9 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.css" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link href="extras/noUiSlider/nouislider.css" rel="stylesheet">
+
       <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
 
     </head>
@@ -27,10 +28,9 @@
       <?php include_once ("footer.php"); ?>
 
      <!--JAVASCRIPT-->
-
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
 
       <script>
         M.AutoInit();
@@ -43,20 +43,20 @@
       </script>
 
       <script type="text/javascript">
-          var slider = document.getElementById('prix-slider');
-          noUiSlider.create(slider, {
-           start: [20, 80],
-           connect: true,
-           step: 1,
-           orientation: 'horizontal', // 'horizontal' or 'vertical'
-           range: {
-             'min': 0,
-             'max': 100
-           },
-           format: wNumb({
-             decimals: 0
-           })
-          });
+        var slider = document.getElementById('prix-slider');
+        noUiSlider.create(slider, {
+         start: [20, 80],
+         connect: true,
+         step: 1,
+         orientation: 'horizontal', // 'horizontal' or 'vertical'
+         range: {
+           'min': 0,
+           'max': 100
+         }
+        // format: wNumb({
+         //  decimals: 0
+         //})
+        });
       </script>
 
       <script>

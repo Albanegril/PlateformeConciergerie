@@ -18,83 +18,93 @@
 
           <div class="container" id="Product">
 
-              <div class="card-panel green lighten-4 alignement">
-                  <div class="row" id="classrow">
-                      <div class="col s5">
-                      <div class="card small">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator card-image" src="images/scandal.jpeg"  ><!-- Image en 500px-->
-                        </div>
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
-                          <p>Le produit ...</p>
-                        </div>
+              <div class="card-panel green lighten-4">
+
+                  <div class="row">
+                   <div class="col offset-l1 l10 s12">
+
+                    <div class="col l5 s12">
+                      <div class="card-panel">
+                            <img class="card-image" src="images/scandal.jpeg"  >
                       </div>
                     </div>
-                    <div class="col s4 left-align" >
-                      <div class="optionv">
-                        <h5>Nom produit</h5>
-                        <h6 class="grey-text">code258-25</h6>
-                      </div>
-                        <div class="row">
-                          <div class="col s8">
-                          <h5 class="red-text ">30,00€</h5></div>
-                          <div class="input-field col s3 new badge" >
-                            <select class="browser-default">
-                              <option value="1" disabled selected>€</option>
-                              <option value="2">$</option>
-                              <option value="3">£</option>
-                            </select>
-                          </div>
-                        </div>  
+
+                    <div class="col l5 s10" >
+
+                      <h4>Nom produit</h4>
+                      <h6 class="grey-text">code258-25</h6>
+                    
+                      <div class="Horizontale">  
+                        <div>
+                          <h5 class="red-text ">30,00€</h5>
+                        </div>
                         
+                        <div class="input-field new badge col l4 s4">
+                          <select>
+                            <option value="1">€</option>
+                            <option value="2">$</option>
+                            <option value="3">£</option>
+                          </select>
+                        </div>
+                      </div> 
+
+                      <div>
                         <ul class="collapsible ">
                           <li>
-                              <div class="collapsible-header">Type de produit</div>
-                              <div class="collapsible-body"><span>juii</span></div>
+                              <div class="collapsible-header">Type : type</div>
+                          </li>
+                          <li>
+                              <div class="collapsible-header">Catégories : Soins Jours, Soins Corps</div>
                           </li>
                           <li>
                               <div class="collapsible-header">Produit inclus</div>
                               <div class="collapsible-body"><span>juii</span></div>
                           </li>
                         </ul>
+                      </div>
+
                     </div>
 
-                    <div class="col s2 optionv" >
-                      <br>
-                        <a href="marque.php">
-                        <img id="image" src="images/vuitton.png" alt="logo marque" class="circle responsive-img">
-                        </a>            
-                        <br>
+                    <div class="col l2 s2 margeTop" >
+                      <div class="card-panel">
+                        <a href="#">
+                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                        </a> 
+                      </div>
+                            
+                      <div class="card-panel">
                         <a href="fournisseur.php">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur" class="circle responsive-img">
-                        </a>      
-                    </div>   
-
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                        </a>
+                      </div>     
+                    </div> 
+                  </div>
 
                   <div class="row">
-                  <table class="table1 col s9 m9">
-                    <thead>
-                        <tr>
-                          <th>Brut</th>
-                          <th>Livaison</th>
-                          <th>NetTask</th>
-                      </tr>
-                  </thead>
+                    <div class="card-panel col offset-l1 l10 s12">
+                      <table class="">
+                        <thead>
+                            <tr>
+                              <th>Original</th>
+                              <th>Livaison</th>
+                              <th>Discount</th>
+                            </tr>
+                        </thead>
 
-                  <tbody>
-                    <tr>
-                      <td>52</td>
-                      <td>25</td>
-                      <td>36</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-          </div>
+                        <tbody>
+                          <tr>
+                            <td>52</td>
+                            <td>25</td>
+                            <td>36</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                </div>
             </div>
           </div>     
-          </div>
 
       <?php include_once ("footer.php"); ?>
 
