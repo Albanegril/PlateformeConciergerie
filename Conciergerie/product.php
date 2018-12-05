@@ -17,8 +17,9 @@
       <?php include_once ("header.php"); ?>
 
           <div class="container" id="Product">
-                  <div class="row">
-                    <div class="col s4">
+              <div class="card-panel green lighten-4 alignement">
+                  <div class="row" id="classrow">
+                      <div class="col s5">
                       <div class="card small">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator card-image" src="images/scandal.jpeg"  ><!-- Image en 500px-->
@@ -29,13 +30,25 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col s4">
-                      <span>
+                    <div class="col s4 left-align" >
+                      <div class="optionv">
                         <h5>Nom produit</h5>
-                        <h4 class="grey-text">code258-25</h4>
-                        <h3 class="red-text">30,00€</h3>
-                        <ul class="collapsible brown lighten-4">
-                          <li class="active">
+                        <h6 class="grey-text">code258-25</h6>
+                      </div>
+                        <div class="row">
+                          <div class="col s8">
+                          <h5 class="red-text ">30,00€</h5></div>
+                          <div class="input-field col s3 new badge" >
+                            <select class="browser-default">
+                              <option value="1" disabled selected>€</option>
+                              <option value="2">$</option>
+                              <option value="3">£</option>
+                            </select>
+                          </div>
+                        </div>  
+                        
+                        <ul class="collapsible ">
+                          <li>
                               <div class="collapsible-header">Type de produit</div>
                               <div class="collapsible-body"><span>juii</span></div>
                           </li>
@@ -45,31 +58,25 @@
                           </li>
                         </ul>
                       
-                      </span>
+                      
 
-                      <div class="input-field">
-                        <select>
-                          <option value="1" disabled selected>Option 1</option>
-                          <option value="2">Option 2</option>
-                          <option value="3">Option 3</option>
-                        </select>
-                      </div>
+                      
                     </div> 
-                    <div class="col s1">
+                    <div class="col s2 optionv" >
                       <br>
-                        <a href="#">
-                        <img src="#" alt="logo marque">
+                        <a href="marque.php">
+                        <img id="image" src="images/vuitton.png" alt="logo marque">
                         </a>            
-                    </div>  
-                    <div class="col s1">
-                      <br>
-                        <a href="#">
-                        <img src="#" alt="logo fournisseur">
+                        <br>
+                        <a href="fournisseur.php">
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
                         </a>
-                      </a>            
+                                 
                     </div>   
-                
-                  <table>
+
+                  <div class="row">
+
+                  <table class="table1 col s9">
                     <thead>
                         <tr>
                           <th>Brut</th>
@@ -86,7 +93,8 @@
                     </tr>
                   </tbody>
                 </table>
-
+            </div>
+          </div>
             </div>
           </div>     
           </div>

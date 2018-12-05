@@ -43,6 +43,32 @@ body
 
 }
 
+.optionv{
+	margin-top: 50px;
+}
+.alignement{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px; 
+
+}
+.table1{
+	background-color: #FAFAFA;
+	margin-top: 20px;
+
+}
+#classrow{
+	margin-left: 110px;
+}
+#image{
+	width: 50px;
+	height: 50px;
+}
+
+#device{
+	width: 50px;
+}
 .card-image {   
   width: auto;
   display: inline-block;    
