@@ -17,6 +17,7 @@
       <?php include_once ("header.php"); ?>
 
           <div class="container" id="Product">
+
               <div class="card-panel green lighten-4 alignement">
                   <div class="row" id="classrow">
                       <div class="col s5">
@@ -57,11 +58,8 @@
                               <div class="collapsible-body"><span>juii</span></div>
                           </li>
                         </ul>
-                      
-                      
+                    </div>
 
-                      
-                    </div> 
                     <div class="col s2 optionv" >
                       <br>
                         <a href="marque.php">
@@ -70,13 +68,12 @@
                         <br>
                         <a href="fournisseur.php">
                         <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
-                        </a>
-                                 
+                        </a>      
                     </div>   
 
-                  <div class="row">
 
-                  <table class="table1 col s9">
+                  <div class="row">
+                  <table class="table1 col s9 m9">
                     <thead>
                         <tr>
                           <th>Brut</th>

@@ -53,6 +53,9 @@ body
     margin-top:50px; 
 
 }
+#myBtn{
+	display: none;
+}
 .table1{
 	background-color: #FAFAFA;
 	margin-top: 20px;

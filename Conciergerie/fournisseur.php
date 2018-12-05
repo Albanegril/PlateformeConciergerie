@@ -17,14 +17,113 @@
       
 
         <div class="container" id="Fournisseur">
-          <div class="row">
+          
               <h3 class="center">Fiche fournisseur</h3>
+              <div class="row">
+              <form>
+                <div class="input-field col s4 offset-s8">
+                  <select>
+                    <option value="" disabled selected>Choose the order</option>
+                    <option value="1">By prize</option>
+                    <option value="2">By accuracy</option>
+                  </select>
+                </div>
+              </form>
+            </div>
 
+            <div class="col s8 m5">
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="image/scandal.jpeg">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>Item 1</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Link to page item</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s8 m7">
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="https://lorempixel.com/100/190/nature/6">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>Item 2</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Link to page item</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s8 m7">
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="https://lorempixel.com/100/190/nature/6">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>Item 3</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Link to page item</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a class="btn" id="bouton_texte" onclick="afficher_cacher('texte');">Afficher plus</a>
+    
+            <div class="col s8 m7 texte" id="texte">
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img src="https://lorempixel.com/100/190/nature/6">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <p>Item 4</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Link to page item</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <div class="fixed-action-btn" id="myBtn" onclick="topFunction()">
+              <a class="btn-floating btn red">
+                <i class="large material-icons">arrow_drop_up</i>
+              </a></div>
           </div>
+
+          
         </div>
       <?php include_once ("footer.php"); ?>
 
-      <!--JavaScript at end of body for optimized loading-->
+      <!--JavaScript at end of body for optimized loading onclick="topFunction()" id="myBtn" title="Go to top"-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
+      <script type="text/javascript" src="js/topF.js"></script>
+      <script type="text/javascript" src="js/afficherPlus.js"></script>
+      <script>
+        M.AutoInit();
+      </script>
+
+      <script type="text/javascript">
+    //<!--
+        afficher_cacher('texte');
+    //-->
+    </script>
+
+      
+     
     </body>
   </html>
