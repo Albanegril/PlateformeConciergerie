@@ -20,11 +20,6 @@ footer
     left: 0;
 }
 
-body
-{
-	background-color: #e0e0e0  !impotant;
-}
-
 .navbar
 {
 	background-color: orange; 
@@ -55,17 +50,6 @@ body
 	justify-content: space-around;
 }
 
-.margeTop{
-	margin-top: 50px;
-}
-
-.alignement{
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:50px; 
-
-}
 
 .Horizontale
 {

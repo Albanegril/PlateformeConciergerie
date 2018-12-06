@@ -13,7 +13,6 @@
     </head>
 
     <body class=" teal lighten-4">
-      <?php include_once ("initialisation.php"); ?>
       <?php include_once ("header.php"); ?>
 
           <div class="container">
@@ -34,16 +33,16 @@
                       <h4>Nom produit</h4>
                       <h6 class="white-text">code258-25</h6>
                     
-                      <div class="Horizontale">  
+                      <div class="Horizontale">  <!-- Inutile : envlever / transformer en choix produit similaire-->
                         <div>
-                          <h5 class="red-text ">30,00€</h5>
+                          <h6 class="red-text ">30,00€</h6>
                         </div>
                         
-                        <div class="input-field new badge col l4 s4">
+                        <div class="input-field new badge col l5 s5"> <!-- choix =/= volumes-->
                           <select>
-                            <option value="1">€</option>
-                            <option value="2">$</option>
-                            <option value="3">£</option>
+                            <option value="1">5O ml</option>
+                            <option value="2">100 ml</option>
+                            <option value="3">150 ml</option>
                           </select>
                         </div>
                       </div> 
@@ -67,7 +66,7 @@
 
                     <div class="col l2 s2 margeTop" >
                       <div class="card-panel">
-                        <a href="#">
+                        <a href="marque.php">
                         <img id="image" src="images/vuitton.png" alt="logo marque">
                         </a> 
                       </div>

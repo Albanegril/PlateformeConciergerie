@@ -19,7 +19,7 @@
 
         <div class="card-panel teal lighten-2" id="Fournisseur">
           
-            <h4 class="center">Fiche fournisseur</h4>
+            <h4 class="center">Fiche Marque</h4>
               
             <div class="row">
               <form>

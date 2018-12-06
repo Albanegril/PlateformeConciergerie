@@ -15,7 +15,7 @@
     </head>
 
     <body class=" teal lighten-4">
-      <?php include_once ("initialisation.php"); ?>
+      
       <?php include_once ("header.php"); ?>
 
       <div class="container">
@@ -61,11 +61,25 @@
       </script>
 
       <script>
+        //collapsible dans product.php
           $(document).ready(function(){
             $('.collapsible').collapsible();
           });
       </script>
 
+      <script type="text/javascript">
+        //chips autocomplet Catégories dans research.php
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.chips');
+          var instances = M.Chips.init(elems, options);
+        });
+
+        var chip = {
+          tag: 'chip content',
+          image: '', //optional
+        };
+      
+      </script>
 
     </body>
   </html>

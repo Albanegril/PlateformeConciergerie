@@ -17,36 +17,37 @@
 
       <div class="container">
 <br>
-        <div class="card-panel" id="Compte">
+        <div class="card-panel teal lighten-2" id="Compte">
           <div class="row">
-            <div class="col s10 offset-s1 l4 offset-l4">
+            <h5>Hello Pseudo</h5>
+            <p>Name : name</p>
+          </div>
+
+          <div class="card col l6 s12">
+            <div class="card-content">
+
+              <form method="post" action="traitementMdp.php" class="formulaire col offset-l1">
+
+                <span>Change Password : </span>
+
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Current Password</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">New Password</label>
+                </div>
+
+                <div class="col offset-s5">
+                  <input type="submit" value="Valider" class="waves-effect waves-light btn"/>
+                </div>
+                
+              </form>
               
             </div>
           </div>
-
-          <h5>Hello Pseudo</h5>
-          <h6>Name : name</h6>
-          <hr/> <br>
-          <form method="post" action="traitementMdp.php" class="formulaire">
-            <h6>Change Password : </h6>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Current Password</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">New Password</label>
-              </div>
-            </div>
-            <br>
-            <div class="col offset-s5">
-              <input type="submit" value="Valider" class="waves-effect waves-light btn"/>
-            </div>
-            
-          </form>
                
         </div>
         
