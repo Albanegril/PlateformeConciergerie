@@ -20,14 +20,9 @@ footer
     left: 0;
 }
 
-body
-{
-	background-color: #FAFAFA !impotant;
-}
-
-.navbar
-{
-	background-color: orange; 
+.card-image {   
+  width: auto;
+  display: inline-block;    
 }
 
 /*Connexion */
@@ -40,12 +35,19 @@ body
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100%;
-
 }
 
-.optionv{
+.titrePage
+{
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.margeTop{
 	margin-top: 50px;
 }
+
 .alignement{
 	display: block;
     margin-left: auto;
@@ -56,14 +58,8 @@ body
 #myBtn{
 	display: none;
 }
-.table1{
-	background-color: #FAFAFA;
-	margin-top: 20px;
 
-}
-#classrow{
-	margin-left: 110px;
-}
+
 #image{
 	width: 50px;
 	height: 50px;
@@ -71,10 +67,6 @@ body
 
 #device{
 	width: 50px;
-}
-.card-image {   
-  width: auto;
-  display: inline-block;    
 }
 
 /* Product */

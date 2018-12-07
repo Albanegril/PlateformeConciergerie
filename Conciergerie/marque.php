@@ -15,13 +15,12 @@
     <body class="grey lighten-5">
       <?php include_once ("header.php"); ?>
       
-      <h4 class="center optionv">Fiche Marque</h4>
-      <div class="container optionv">
+      <div class="container">
+
+        <h4 class="titrePage">Fiche Marque</h4>
 
         <div class="card-panel blue-grey lighten-1" id="Marque" >
-          
-            
-              
+
             <div class="row">
               <form>
                 <div class="input-field col s4 offset-s8">
@@ -33,8 +32,6 @@
                 </div>
               </form>
             </div>
-
-          
 
             <div class="col s12 m12">
               <div class="card horizontal">

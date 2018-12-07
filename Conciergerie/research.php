@@ -1,6 +1,6 @@
-<div id="Formulaire" class="card-panel teal lighten-2">
-  <h4>Forms</h4>
+<h4 class="titrePage">Formulaire</h4>
 
+<div id="Formulaire" class="card-panel blue-grey lighten-1">
     <div class="row">
       <form method="post" action="traitementRecherche.php">
         <div class="row">

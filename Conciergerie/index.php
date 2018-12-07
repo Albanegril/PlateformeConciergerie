@@ -14,7 +14,7 @@
 
     </head>
 
-    <body class=" teal lighten-4">
+    <body class="grey lighten-5">
       
       <?php include_once ("header.php"); ?>
 

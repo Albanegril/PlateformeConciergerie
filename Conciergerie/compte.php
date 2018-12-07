@@ -12,14 +12,16 @@
 
     </head>
 
-    <body class=" teal lighten-4">
+    <body class="grey lighten-5">
       <?php include_once ("header.php"); ?>
 
       <div class="container">
-<br>
-        <div class="card-panel teal lighten-2" id="Compte">
+
+        <h4 class="titrePage">Fiche Compte</h4>
+        <div class="card-panel blue-grey lighten-1" id="Compte">
+
           <div class="row">
-            <h5>Hello Pseudo</h5>
+            <h6>Hello Pseudo</h6>
             <p>Name : name</p>
           </div>
 

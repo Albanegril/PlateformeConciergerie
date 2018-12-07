@@ -12,106 +12,120 @@
 
     </head>
 
-    <body class=" teal lighten-4">
+    <body class="grey lighten-5">
       <?php include_once ("header.php"); ?>
 
           <div class="container">
 
-              <div class="card-panel teal lighten-2"  id="Product">
-
-                <h4>Fiche Ajout Produit</h4>
+              <h4 class="titrePage">Fiche Ajout Produit</h4>
+              <div class="card-panel blue-grey lighten-1"  id="Product">
 
                 <h6 class="white-text">code : genération auto</h6>
 
                 <div class="card-panel">
 
-                  <div class="input-field inline">
-                      Nom produit<input id="Nom" type="text" class="validate" name="Nom">
+                  <div class="row">
+                    <div class="input-field inline col l6 s12">
+                        Nom produit<input id="Nom" type="text" class="validate" name="Nom">
                     </div>
-     
-                    <div class="input-field inline col s12">
+       
+                    <div class="input-field inline col l6 s12">
                       Lien page Produit<input id="lien" type="url" class="validate"  name="lien">
                     </div>
+                  </div>
 
-                    <p>choisir marque</p>
-
-                    <p>choisir fournisseur</p>
-
-                    <div class="">
-                      <p>Ajout image</p>
-
-                      <div class="col s12">
-                          <div class="file-field input-field">
-                            <div class="btn-small bouton">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                            <span>Parcourir</span>
-                            <input id="affiche" type="file"  name="image">
-                          </div>
-                          <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" >
-                            <label for="affiche">Image</label>
-                            </div>
-                          </div>
-                      </div>
+                  <div class="row">
+                    <div class="input-field col l6 s12">
+                      <select>
+                        <option value="" disabled selected>Choisir une Marque</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
                     </div>
- 
-                        
-                    <div class="input-field new badge col l4 s4">
+
+                    <div class="input-field col l6 s12">
+                      <select>
+                        <option value="" disabled selected>Choisir un Fournisseur</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col l6 s12">
+                        <div class="file-field input-field">
+                          <div class="btn-small bouton">
+                          <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+                          <span>Parcourir</span>
+                          <input id="affiche" type="file"  name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" >
+                          <label for="affiche">Image</label>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="input-field new badge col l6 s12">
                       <select>
                         <option value="1">€</option>
                         <option value="2">$</option>
                         <option value="3">£</option>
                       </select>
                     </div>
-
                   </div>
 
-                  <div>
-                    <ul class="collapsible ">
-                      <li>
-                          <div class="collapsible-header">Type : choisir dans la table</div>
-                      </li>
-                      <li>
-                          <div class="collapsible-header">Catégories : ajouter avec chips ?</div>
-                      </li>
-                      <li>
-                          <div class="collapsible-header">Produit inclus</div>
-                          <div class="collapsible-body">
-                            <div class="input-field col s12">
-                            Texte descriptif<textarea id="descriptif" class="materialize-textarea"  name="details" ></textarea>
-                            </div>
+                </div>
+
+                <div>
+                  <ul class="collapsible ">
+                    <li>
+                        <div class="collapsible-header">Type : choisir dans la table</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Catégories : ajouter avec chips ?</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Produit inclus</div>
+                        <div class="collapsible-body">
+                          <div class="input-field col s12">
+                          Texte descriptif<textarea id="descriptif" class="materialize-textarea"  name="details" ></textarea>
                           </div>
-                      </li>
-                    </ul>
-                  </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
                 
-                  <div class="row">
-                    <div class="card-panel col offset-l1 l10 s12">
-                      <table class="">
-                        <thead>
-                            <tr>
-                              <th>Original</th>
-                              <th>Livaison</th>
-                              <th>Discount</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
+                <div class="row">
+                  <div class="card-panel">
+                    <table class="">
+                      <thead>
                           <tr>
-                            <td>52</td>
-                            <td>25</td>
-                            <td>36</td>
+                            <th>Original</th>
+                            <th>Livaison</th>
+                            <th>Discount</th>
                           </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                      </thead>
 
-                  <div class="row">
-                    <div class="col s12 right-align">
-                      <input type="submit" value="Ajouter" class="waves-effect waves-light btn" />
-                    </div>
+                      <tbody>
+                        <tr>
+                          <td>52</td>
+                          <td>25</td>
+                          <td>36</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 right-align">
+                    <input type="submit" value="Ajouter" class="waves-effect waves-light btn" />
+                  </div>
+                </div>
 
             </div>
           </div>     
