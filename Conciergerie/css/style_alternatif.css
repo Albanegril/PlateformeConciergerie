@@ -3,12 +3,11 @@ Il ne doit logiquement y avoir que des changements de couleur */
 
 header
 {
-   	background-color: #ce5a4d;
-}
+   	background-color: #2e7d32;
 
 footer
 {
-    background-color: #ce5a4d !important;
+    background-color: #2e7d32 !important;
 }
 
 .bouton

@@ -12,14 +12,15 @@
 
     </head>
 
-    <body class=" teal lighten-4">
+    <body class="grey lighten-5">
       <?php include_once ("header.php"); ?>
       
-      <div class="container">
+      <h4 class="center optionv">Fiche Marque</h4>
+      <div class="container optionv">
 
-        <div class="card-panel teal lighten-2" id="Fournisseur">
+        <div class="card-panel blue-grey lighten-1" id="Marque" >
           
-            <h4 class="center">Fiche Marque</h4>
+            
               
             <div class="row">
               <form>

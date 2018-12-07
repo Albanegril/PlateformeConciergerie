@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['num'])): ?>
-    <nav class="teal darken-4">
+    <nav class=" light-blue darken-4">
       <div class="nav-wrapper ">
         <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="100px"/></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -12,7 +12,7 @@
     </nav>
 
 <?php else: ?>
-    <nav class="teal darken-4">
+    <nav class=" light-blue darken-4">
       <div class="nav-wrapper ">
         <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="100px"/></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">

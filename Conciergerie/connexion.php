@@ -20,9 +20,9 @@
           <div class="col s10 offset-s1 l3 offset-l4">
 
             <div class="card darken-1">
-              <div class="card-image">
+              <div class="card-image" >
                 <br>
-                <img src="images/user.png" width="100px">
+                <img src="images/user.png" class="circle responsive-img images">
               </div>
 
               <div class="card-content white-text">
