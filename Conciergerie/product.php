@@ -21,8 +21,8 @@
 
               <div class="card-panel blue-grey lighten-1"  id="Product">
 
-                  <div class="row">
-                   <div class="col offset-l1 l10 s12">
+                <div class="row">
+                  <div class="col offset-l1 l10 s12">
 
                     <div class="col l5 s12">
                       <div class="card-panel">
@@ -31,77 +31,69 @@
                     </div>
 
                     <div class="col l5 s10" >
-
                       <h4>Nom produit</h4>
                       <h6 class="white-text">code258-25</h6>
-                    
-                      <div class="Horizontale">  <!-- Inutile : envlever / transformer en choix produit similaire-->
-                        <div>
-                          <h6 class="red-text ">30,00€</h6>
-                        </div>
-                        
-                        <div class="input-field new badge col l5 s5"> <!-- choix =/= volumes-->
-                          <select>
-                            <option value="1">5O ml</option>
-                            <option value="2">100 ml</option>
-                            <option value="3">150 ml</option>
-                          </select>
-                        </div>
-                      </div> 
-
-                      <div>
-                        <ul class="collapsible ">
-                          <li>
-                              <div class="collapsible-header">Type : type</div>
-                          </li>
-                          <li>
-                              <div class="collapsible-header">Catégories : Soins Jours, Soins Corps</div>
-                          </li>
-                          <li>
-                              <div class="collapsible-header">Produit inclus</div>
-                              <div class="collapsible-body"><span>juii</span></div>
-                          </li>
-                        </ul>
+ 
+                      <div class="input-field new badge col l5 s5"> <!-- choix =/= volumes-->
+                        <select>
+                          <option value="1">5O ml</option>
+                          <option value="2">100 ml</option>
+                          <option value="3">150 ml</option>
+                        </select>
                       </div>
+                    </div> 
 
-                    </div>
-
-                    <div class="col l2 s2 margeTop" >
+                    <div class="col l2 offset-l1 s6">
                       <div class="card-panel">
                         <a href="marque.php">
                         <img id="image" src="images/vuitton.png" alt="logo marque">
                         </a> 
                       </div>
-                            
+                    </div>
+                      
+                    <div class="col l2 offset-l1 s6">
                       <div class="card-panel">
                         <a href="fournisseur.php">
                         <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
                         </a>
-                      </div>     
+                      </div>
                     </div> 
+                    
                   </div>
 
-                  <div class="row">
-                    <div class="card-panel col offset-l1 l10 s12">
-                      <table class="">
-                        <thead>
-                            <tr>
-                              <th>Original</th>
-                              <th>Livaison</th>
-                              <th>Discount</th>
-                            </tr>
-                        </thead>
+                </div>
 
-                        <tbody>
+                <div class="row">
+                  <div class="col l10 offset-l1 s12 ">
+                    <ul class="collection">
+                      <li class="collection-item">Type : <span class="badge">Type</span></li>
+                      <li class="collection-item">Catégories : <span class="badge">Soins Jours</span> <span class="badge">Soins Corps</span></li>
+                      <li class="collection-item">Produits inclus : <span class="badge">Description</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="card-panel col offset-l1 l10 s12">
+                    <table class="">
+                      <thead>
                           <tr>
-                            <td>52</td>
-                            <td>25</td>
-                            <td>36</td>
+                            <th>Original</th>
+                            <th>Livaison</th>
+                            <th>Discount</th>
                           </tr>
-                        </tbody>
-                      </table>
-                    </div>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>52,00 €</td> 
+                          <td>25,00 €</td> <!-- ajouter la monnaie de base grace à la BD -->
+                          <td><h6 class="red-text ">30,00€</h6></td> <!-- mettre en verte ou rouge ? -->
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
+                </div>
 
                 </div>
             </div>

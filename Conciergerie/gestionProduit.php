@@ -15,12 +15,25 @@
     <body class="grey lighten-5">
       <?php include_once ("header.php"); ?>
 
+
           <div class="container">
 
-              <h4 class="titrePage">Fiche Ajout Produit</h4>
-              <div class="card-panel blue-grey lighten-1"  id="Product">
+              <h4 class="titrePage">Fiche Gestion Produit</h4>
 
-                <h6 class="white-text">code : genération auto</h6>
+              <div class="row">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s4"><a class="active" href="#Ajouter">Ajouter</a></li>
+                    <li class="tab col s4"><a href="#Modifier">Modifier</a></li>
+                    <li class="tab col s4"><a href="#Supprimer">Supprimer</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Ajouter -->
+              <div class="card-panel blue-grey lighten-1"  id="Ajouter">
+
+                <h6 class="white-text">code : genération auto</h6><br>
 
                 <div class="card-panel">
 
@@ -128,6 +141,176 @@
                 </div>
 
             </div>
+
+            <!-- MODIFIER -->
+            <div class="card-panel blue-grey lighten-1"  id="Modifier">
+
+                <div class="input-field col l6 s12">
+                  <select>
+                    <option value="" disabled selected>Choisir le code du produit</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                  
+
+                <div class="card-panel">
+
+                  <div class="row">
+                    <div class="input-field inline col l6 s12">
+                        Nom produit<input id="Nom" type="text" class="validate" name="Nom">
+                    </div>
+       
+                    <div class="input-field inline col l6 s12">
+                      Lien page Produit<input id="lien" type="url" class="validate"  name="lien">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col l6 s12">
+                      <select>
+                        <option value="" disabled selected>Choisir une Marque</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                    </div>
+
+                    <div class="input-field col l6 s12">
+                      <select>
+                        <option value="" disabled selected>Choisir un Fournisseur</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col l6 s12">
+                        <div class="file-field input-field">
+                          <div class="btn-small bouton">
+                          <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+                          <span>Parcourir</span>
+                          <input id="affiche" type="file"  name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" >
+                          <label for="affiche">Image</label>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="input-field new badge col l6 s12">
+                      <select>
+                        <option value="1">€</option>
+                        <option value="2">$</option>
+                        <option value="3">£</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div>
+                  <ul class="collapsible ">
+                    <li>
+                        <div class="collapsible-header">Type : choisir dans la table</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Catégories : ajouter avec chips ?</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Produit inclus</div>
+                        <div class="collapsible-body">
+                          <div class="input-field col s12">
+                          Texte descriptif<textarea id="descriptif" class="materialize-textarea"  name="details" ></textarea>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="row">
+                  <div class="card-panel">
+                    <table class="">
+                      <thead>
+                          <tr>
+                            <th>Original</th>
+                            <th>Livaison</th>
+                            <th>Discount</th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>52</td>
+                          <td>25</td>
+                          <td>36</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12 right-align">
+                    <input type="submit" value="Modifier" class="waves-effect waves-light btn" />
+                  </div>
+                </div>
+
+            </div>
+
+            <!-- Supprimer -->
+            <div class="card-panel blue-grey lighten-1"  id="Supprimer">
+
+              
+                <div class="row">
+                    <div class="col l6 offset-l3 s10 offset-s1">
+                      <div class="card horizontal">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">search</i>
+                          <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
+                          <label for="autocomplete-input">Recherche ...</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p>Afficher les produits trouver, puis séléctionner le bon</p>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col l6 s12">
+                      <select>
+                        <option value="" disabled selected>Choisir un Nom produit</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                    </div>
+
+                    <div class="input-field col l6 s12">
+                      <select>
+                        <option value="" disabled selected>Choisir un code</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                      </select>
+                    </div>
+                  </div>
+
+                <div class="row">
+                  <div class="col s12 right-align">
+                    <input type="submit" value="Supprimer" class="waves-effect waves-light btn" />
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
           </div>     
 
       <?php include_once ("footer.php"); ?>
@@ -151,6 +334,11 @@
           $(document).ready(function(){
             $('.collapsible').collapsible();
           });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $('.tabs').tabs();
+        });
       </script>
     </body>
   </html>
