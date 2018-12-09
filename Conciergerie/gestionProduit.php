@@ -82,34 +82,45 @@
                         </div>
                     </div>
 
-                    <div class="input-field new badge col l6 s12">
+                    <div class="input-field new badge col l3 s6">
                       <select>
                         <option value="1">€</option>
                         <option value="2">$</option>
                         <option value="3">£</option>
                       </select>
                     </div>
+                    <div class="input-field new badge col l3 s6"> <!-- choix =/= volumes-->
+                      <select>
+                        <option value="1">5O ml</option>
+                        <option value="2">100 ml</option>
+                        <option value="3">150 ml</option>
+                      </select>
+                    </div>
+
+
                   </div>
 
                 </div>
 
-                <div>
-                  <ul class="collapsible ">
-                    <li>
-                        <div class="collapsible-header">Type : choisir dans la table</div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">Catégories : ajouter avec chips ?</div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">Produit inclus</div>
-                        <div class="collapsible-body">
-                          <div class="input-field col s12">
-                          Texte descriptif<textarea id="descriptif" class="materialize-textarea"  name="details" ></textarea>
-                          </div>
+                <div class="row">
+                  <div class="col l10 offset-l1 s12 ">
+                    <ul class="collection">
+                      <li class="collection-item"> 
+                        <div class="input-field">
+                          <input id="Type" type="text" class="validate">
+                          <label for="Type">Type :</label>
                         </div>
-                    </li>
-                  </ul>
+                      </li>
+                      <li class="collection-item">
+                        <div class="chips chips-autocomplete" id="Catégories"></div>
+                      </li>
+                      <li class="collection-item">
+                        <div class="input-field col s12">
+                          Produits inclus : <textarea id="descriptif" class="materialize-textarea"  name="details" ></textarea>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 
                 <div class="row">
@@ -340,5 +351,18 @@
           $('.tabs').tabs();
         });
       </script>
+      <script type="text/javascript">
+        //chips autocomplet Catégories dans research.php
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.chips');
+          var instances = M.Chips.init(elems, options);
+        });
+
+        var chip = {
+          tag: 'chip content',
+          image: '', //optional
+        };
+      
+      </script>      
     </body>
   </html>
