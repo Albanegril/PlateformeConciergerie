@@ -77,7 +77,7 @@
     
 
           <div class="col offset-s5">
-            <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn" onclick="rechercher()"/>
+            <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn  yellow darken-2" onclick="rechercher()"/>
           </div>
 
         </form>

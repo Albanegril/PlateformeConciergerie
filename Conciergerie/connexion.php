@@ -35,7 +35,7 @@
                     <input id="password" type="password" class="validate" name="password">
                     <label for="password">Password</label>
                   </div>
-                  <input type="submit" value="Connexion" class="waves-effect waves-light btn" />
+                  <input type="submit" value="Connexion" class="waves-effect waves-light btn  yellow darken-2" />
                 </form>
               </div>
             </div>
