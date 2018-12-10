@@ -1,4 +1,4 @@
-<div class="card-panel blue-grey lighten-1" id="Resultat">
+<div class="card-panel blue-grey lighten-1" id="Resultat" style="display: none;">
 
     <div class="row">
       <form>
