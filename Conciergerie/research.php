@@ -2,7 +2,7 @@
 
 <div id="Formulaire" class="card-panel blue-grey lighten-1">
     <div class="row">
-      <form method="post" action="traitementRecherche.php">
+      <form  ><!-- method="post" action="traitementRecherche.php"-->
         <div class="row">
 
           <div class="row">

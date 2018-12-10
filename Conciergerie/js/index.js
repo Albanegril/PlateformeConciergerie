@@ -18,5 +18,5 @@ M.AutoInit();
 
 function rechercher()
 {
-	 $("#Resultat").show();
+    	 $("#Resultat").show();
 }

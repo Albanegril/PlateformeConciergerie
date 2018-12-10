@@ -1,7 +1,7 @@
 <?php
 
  //TRAITEMENT RECHECHE  
-if(isset($_POST['Recherche'] )){
+/*if(isset($_POST['Recherche'] )){
    
       $Autocomplet = $_POST['autocomplete-input'];
       if($Autocomplet !=''){   // si le produit existe alors on le recupère 
@@ -77,6 +77,6 @@ if(isset($_POST['Recherche'] )){
                   </form>
               </div>
           ';
-        }
+        }*/
         
 ?>
