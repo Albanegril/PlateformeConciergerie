@@ -33,63 +33,8 @@
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-
-
-      <script>
-        $(document).ready(function(){
-          $('select').formSelect();
-        });
-      </script>
-      <!--Script pour autocomplete-->
-      <script>
-      $(document).ready(function(){
-    $('input.autocomplete').autocomplete({
-      data: {
-        "Gucci": null,
-        "Laurent": null,
-        "Google": 'https://placehold.it/250x250'
-      },
-    });
-  });</script>
-
-      <script type="text/javascript">
-        var slider = document.getElementById('prix-slider');
-        noUiSlider.create(slider, {
-         start: [20, 80],
-         connect: true,
-         step: 1,
-         orientation: 'horizontal', // 'horizontal' or 'vertical'
-         range: {
-           'min': 0,
-           'max': 100
-         }
-        // format: wNumb({
-         //  decimals: 0
-         //})
-        });
-      </script>
-
-      <script>
-        //collapsible dans product.php
-          $(document).ready(function(){
-            $('.collapsible').collapsible();
-          });
-      </script>
-
-      <script type="text/javascript">
-        //chips autocomplet Catégories dans research.php
-        document.addEventListener('DOMContentLoaded', function() {
-          var elems = document.querySelectorAll('.chips');
-          var instances = M.Chips.init(elems, options);
-        });
-
-        var chip = {
-          tag: 'chip content',
-          image: '', //optional
-        };
-      
-      </script>
+      <script type="text/javascript" src="js/myscript.js"></script>
+      <script type="text/javascript" src="js/myscript.js"></script>
 
     </body>
   </html>

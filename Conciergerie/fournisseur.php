@@ -122,10 +122,7 @@
       <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
       <script type="text/javascript" src="js/topF.js"></script>
       <script type="text/javascript" src="js/afficherPlus.js"></script>
-
-      <script>
-        M.AutoInit();
-      </script>
+      <script type="text/javascript" src="js/myscript.js"></script>
 
       <script type="text/javascript">
       //<!--

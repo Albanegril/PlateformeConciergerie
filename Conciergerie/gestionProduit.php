@@ -316,38 +316,8 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
+      <script type="text/javascript" src="js/myscript.js"></script>
 
-      <script>
-        M.AutoInit();
-      </script>
-
-      <script>
-        $(document).ready(function(){
-          $('select').formSelect();
-        });
-      </script>
-      <script>
-          $(document).ready(function(){
-            $('.collapsible').collapsible();
-          });
-      </script>
-      <script>
-        $(document).ready(function(){
-          $('.tabs').tabs();
-        });
-      </script>
-      <script type="text/javascript">
-        //chips autocomplet Catégories dans research.php
-        document.addEventListener('DOMContentLoaded', function() {
-          var elems = document.querySelectorAll('.chips');
-          var instances = M.Chips.init(elems, options);
-        });
-
-        var chip = {
-          tag: 'chip content',
-          image: '', //optional
-        };
-      
-      </script>      
+   
     </body>
   </html>
