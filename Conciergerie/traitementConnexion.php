@@ -26,7 +26,7 @@
             $_SESSION['login'] = $login;
             $_SESSION['id'] = $data['numConcierge'];
 
-            header('Location : connexion.php');
+            header('Location:index.php');
             
         } else {
             //Password is incorrect
