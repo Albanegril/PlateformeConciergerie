@@ -41,6 +41,17 @@
           $('select').formSelect();
         });
       </script>
+      <!--Script pour autocomplete-->
+      <script>
+      $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Gucci": null,
+        "Laurent": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    });
+  });</script>
 
       <script type="text/javascript">
         var slider = document.getElementById('prix-slider');

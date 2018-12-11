@@ -18,5 +18,15 @@ M.AutoInit();
 
 function rechercher()
 {
+	var htmlCode = "";
+
     	 $("#Resultat").show();
 }
+
+$('input.autocomplete').autocomplete({
+      data: {
+        "Gucci": null,
+        "Laurent": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    });

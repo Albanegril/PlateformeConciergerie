@@ -9,7 +9,7 @@
             <div class="col l6 offset-l3 s10 offset-s1">
               <div class="card horizontal">
                 <div class="input-field col s12">
-                  <i class="material-icons prefix">search</i>
+                  <i class="material-icons prefix" onchange="rechercherProduit()">search</i>
                   <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
                   <label for="autocomplete-input">Recherche ...</label>
                 </div>
