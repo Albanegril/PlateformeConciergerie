@@ -12,7 +12,7 @@
 
     </head>
 
-    <body class="grey lighten-5">
+    <body class="">
       <?php include_once ("header.php"); ?>
 
 
@@ -31,11 +31,9 @@
               </div>
 
               <!-- Ajouter -->
-              <div class="card-panel blue-grey lighten-1"  id="Ajouter">
+              <div class="card-panel grey lighten-5"  id="Ajouter">
 
-                <h6 class="white-text">code : genération auto</h6><br>
-
-                <div class="card-panel">
+                <h6>code : genération auto</h6><br>
 
                   <div class="row">
                     <div class="input-field inline col l6 s12">
@@ -68,6 +66,7 @@
                   </div>
 
                   <div class="row">
+
                     <div class="col l6 s12">
                         <div class="file-field input-field">
                           <div class="btn-small bouton">
@@ -97,10 +96,7 @@
                       </select>
                     </div>
 
-
                   </div>
-
-                </div>
 
                 <div class="row">
                   <div class="col l10 offset-l1 s12 ">
@@ -124,7 +120,6 @@
                 </div>
                 
                 <div class="row">
-                  <div class="card-panel">
                     <table class="">
                       <thead>
                           <tr>
@@ -142,7 +137,6 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
                 </div>
 
                 <div class="row">
@@ -154,7 +148,7 @@
             </div>
 
             <!-- MODIFIER -->
-            <div class="card-panel blue-grey lighten-1"  id="Modifier">
+            <div class="card-panel grey lighten-5"  id="Modifier">
 
                 <div class="input-field col l6 s12">
                   <select>
@@ -164,64 +158,59 @@
                     <option value="3">Option 3</option>
                   </select>
                 </div>
-                  
+            
+                <div class="row">
+                  <div class="input-field inline col l6 s12">
+                      Nom produit<input id="Nom" type="text" class="validate" name="Nom">
+                  </div>
+     
+                  <div class="input-field inline col l6 s12">
+                    Lien page Produit<input id="lien" type="url" class="validate"  name="lien">
+                  </div>
+                </div>
 
-                <div class="card-panel">
-
-                  <div class="row">
-                    <div class="input-field inline col l6 s12">
-                        Nom produit<input id="Nom" type="text" class="validate" name="Nom">
-                    </div>
-       
-                    <div class="input-field inline col l6 s12">
-                      Lien page Produit<input id="lien" type="url" class="validate"  name="lien">
-                    </div>
+                <div class="row">
+                  <div class="input-field col l6 s12">
+                    <select>
+                      <option value="" disabled selected>Choisir une Marque</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
                   </div>
 
-                  <div class="row">
-                    <div class="input-field col l6 s12">
-                      <select>
-                        <option value="" disabled selected>Choisir une Marque</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
-
-                    <div class="input-field col l6 s12">
-                      <select>
-                        <option value="" disabled selected>Choisir un Fournisseur</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
+                  <div class="input-field col l6 s12">
+                    <select>
+                      <option value="" disabled selected>Choisir un Fournisseur</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
                   </div>
+                </div>
 
-                  <div class="row">
-                    <div class="col l6 s12">
-                        <div class="file-field input-field">
-                          <div class="btn-small bouton">
-                          <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                          <span>Parcourir</span>
-                          <input id="affiche" type="file"  name="image">
+                <div class="row">
+                  <div class="col l6 s12">
+                      <div class="file-field input-field">
+                        <div class="btn-small bouton">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+                        <span>Parcourir</span>
+                        <input id="affiche" type="file"  name="image">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" >
+                        <label for="affiche">Image</label>
                         </div>
-                        <div class="file-path-wrapper">
-                          <input class="file-path validate" type="text" >
-                          <label for="affiche">Image</label>
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="input-field new badge col l6 s12">
-                      <select>
-                        <option value="1">€</option>
-                        <option value="2">$</option>
-                        <option value="3">£</option>
-                      </select>
-                    </div>
+                      </div>
                   </div>
 
+                  <div class="input-field new badge col l6 s12">
+                    <select>
+                      <option value="1">€</option>
+                      <option value="2">$</option>
+                      <option value="3">£</option>
+                    </select>
+                  </div>
                 </div>
 
                 <div>
@@ -244,7 +233,6 @@
                 </div>
                 
                 <div class="row">
-                  <div class="card-panel">
                     <table class="">
                       <thead>
                           <tr>
@@ -262,7 +250,6 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
                 </div>
 
                 <div class="row">
@@ -274,18 +261,16 @@
             </div>
 
             <!-- Supprimer -->
-            <div class="card-panel blue-grey lighten-1"  id="Supprimer">
+            <div class="card-panel grey lighten-5"  id="Supprimer">
 
               
                 <div class="row">
                     <div class="col l6 offset-l3 s10 offset-s1">
-                      <div class="card horizontal">
                         <div class="input-field col s12">
                           <i class="material-icons prefix">search</i>
                           <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
                           <label for="autocomplete-input">Recherche ...</label>
                         </div>
-                      </div>
                     </div>
                   </div>
 

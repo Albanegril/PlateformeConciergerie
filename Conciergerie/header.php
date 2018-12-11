@@ -1,27 +1,19 @@
-<?php if (isset($_SESSION['num'])): ?>
-    <nav class="deep-orange darken-4">
-      <div class="nav-wrapper ">
-        <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="100px"/></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="index.php">Recherche</a></li>
-          <li><a href="index.php">Resultats</a></li>
-          <li><a href="compte.php">Compte</a></li>
-          <li><a href="deconnexion.php" class="waves-effect waves-light btn yellow darken-2">DECONNEXION</a></li>
-        </ul>
-      </div>
-    </nav>
-
-<?php else: ?>
+  <header>
     <nav class="deep-orange darken-4" >
       <div class="nav-wrapper ">
-        <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="100px"/></a>
+        <a href="index.php" class="brand-logo"><img src="images/Logo.png" alt="NotreLogo" width="150px"/></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.php">Recherche</a></li>
+        <?php 
+        session_start();
+        if (isset($_SESSION['id'])) { ?>
           <li><a href="gestionProduit.php">GestionProduit</a></li>
           <li><a href="compte.php">Compte</a></li>
-          <li><a href="connexion.php" class="waves-effect waves-light btn yellow darken-2" >CONNEXION</a></li>
+          <li><a href="traitementDeconnexion.php" class="waves-effect waves-light btn yellow darken-2">DECONNEXION</a></li>
+        <?php } else { ?>
+          <li><a href="connexion.php" class="waves-effect waves-light btn yellow darken-2">CONNEXION</a></li>
+        <?php } ?>
         </ul>
       </div>
     </nav>
-
-<?php endif ?>
+  </header>

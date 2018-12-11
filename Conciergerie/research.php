@@ -1,25 +1,23 @@
 <h4 class="titrePage">Formulaire</h4>
 
-<div id="Formulaire" class="card-panel blue-grey lighten-1">
+<div id="Formulaire" class="card-panel grey lighten-5">
     <div class="row">
       <form  ><!-- method="post" action="traitementRecherche.php"-->
         <div class="row">
 
           <div class="row">
             <div class="col l6 offset-l3 s10 offset-s1">
-              <div class="card horizontal">
+
                 <div class="input-field col s12">
                   <i class="material-icons prefix" onchange="rechercherProduit()">search</i>
                   <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
                   <label for="autocomplete-input">Recherche ...</label>
                 </div>
-              </div>
+
             </div>
           </div>
 
           <div class="row">
-
-            <div class="card horizontal">
 
               <div class="input-field col l2 offset-l1 s5 offset-l1">
                 <select multiple id="Change" name="Change">
@@ -54,24 +52,18 @@
                 </select>
               </div>
 
-            </div>
-
           </div>
             
       
           <div class="row">
-            <div class="card horizontal">
+            <div class="col l4 offset-l1 s12">
+              <span>Catégorie</span>
+               <div class="chips chips-autocomplete chips-placeholder"></div>
+            </div>
 
-              <div class="col l4 s12">
-                <span>Catégorie</span>
-                 <div class="chips chips-autocomplete chips-placeholder"></div>
-              </div>
-
-              <div class="col l6 s12">
-                <span>Prix</span>
-                <div id="prix-slider"></div>  
-              </div>
-
+            <div class="col l6 offset-l1 s12">
+              <span>Prix</span>
+              <div id="prix-slider"></div>  
             </div>
           </div>
     

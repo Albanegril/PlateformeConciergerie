@@ -20,6 +20,11 @@ footer
     left: 0;
 }
 
+label
+{
+	color:black;
+}
+
 .card-image {   
   width: auto;
   display: inline-block;    

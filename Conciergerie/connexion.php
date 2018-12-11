@@ -12,14 +12,14 @@
 
     </head>
 
-    <body class="grey lighten-5">
+    <body class="">
       <?php session_start();?>
       <?php include_once ("header.php"); ?>
 
         <div class="row">
           <div class="col s10 offset-s1 l3 offset-l4">
 
-            <div class="card darken-1">
+            <div class="card grey lighten-5">
               <div class="card-image" >
                 <br>
                 <img src="images/user.png" class="circle responsive-img images">
