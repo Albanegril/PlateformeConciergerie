@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 11 Décembre 2018 à 15:21
+-- Généré le :  Mar 11 Décembre 2018 à 15:57
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `categorie` (
-  `numCategorie` int(10) unsigned NOT NULL DEFAULT '0',
+  `numCategorie` int(10) unsigned NOT NULL,
   `nomCategorie` varchar(20) NOT NULL,
   PRIMARY KEY (`numCategorie`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
