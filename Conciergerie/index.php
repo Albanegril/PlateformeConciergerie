@@ -18,6 +18,7 @@
       
       <?php include_once ("header.php"); ?>
 
+     
       <div class="container">
         <br>
         <?php include_once ("research.php"); ?>
@@ -81,7 +82,7 @@
         //chips autocomplet Catégories dans research.php
         document.addEventListener('DOMContentLoaded', function() {
           var elems = document.querySelectorAll('.chips');
-          var instances = M.Chips.init(elems, options);
+          /*var instances = M.Chips.init(elems, options);*/
         });
 
         var chip = {
