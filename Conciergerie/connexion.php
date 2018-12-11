@@ -26,10 +26,10 @@
               </div>
 
               <div class="card-content white-text">
-                <form method="post" action="#" class="formulaire">
+                <form method="post" action="traitementConnexion.php" class="formulaire">
                   <div class="input-field col">
-                    <input id="pseudo" type="text" class="validate" name="pseudo">
-                    <label for="pseudo">Pseudo</label>
+                    <input id="login" type="text" class="validate" name="login">
+                    <label for="login">Pseudo</label>
                   </div>
                   <div class="input-field col">
                     <input id="password" type="password" class="validate" name="password">
@@ -46,9 +46,7 @@
 
       <?php include_once ("footer.php"); ?>
       
-      <script>
-        M.AutoInit();
-      </script>
+      
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
