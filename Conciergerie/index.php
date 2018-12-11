@@ -34,7 +34,8 @@
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript" src="js/myscript.js"></script>
+      <script type="text/javascript" src="js/myscript.js"></script>
 
 
       <script>
