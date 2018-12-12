@@ -1,5 +1,5 @@
 <?php
-
+if(isset($_POST['barre']) && !empty($_POST['barre']) && isset($_POST['change']) && !empty($_POST['change']) && isset($_POST['type']) && !empty($_POST['type']) && isset($_POST['marque']) && !empty($_POST['marque']) )
  //TRAITEMENT RECHECHE  
 /*if(isset($_POST['Recherche'] )){
    

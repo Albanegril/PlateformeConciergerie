@@ -30,3 +30,21 @@ $('input.autocomplete').autocomplete({
         "Google": 'https://placehold.it/250x250'
       },
     });
+
+function research(){
+    $post(
+        'traitementRecherche.php',
+        {
+            barre:$('#autocomplete-input').val(),
+            change:$('#Change').val(),
+            type:$('#Type').val(),
+            marque:$('#Marque').val(),
+            shop:$('#Shop').val()
+
+        },
+        function (data)
+        {
+            
+        }
+    );
+}
