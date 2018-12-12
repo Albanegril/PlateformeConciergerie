@@ -13,7 +13,7 @@
     </head>
 
     <body class="">
-      <?php session_start();?>
+      
       <?php include_once ("header.php"); ?>
 
         <div class="row">

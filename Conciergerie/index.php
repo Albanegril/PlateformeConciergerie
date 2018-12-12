@@ -15,7 +15,7 @@
     </head>
 
     <body class="">
-      
+      <?php include_once ("BDopen.php"); ?>
       <?php include_once ("header.php"); ?>
 
      
