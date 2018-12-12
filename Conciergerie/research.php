@@ -16,22 +16,17 @@
 
             </div>
           </div>
+          <?php
+
+          ?>
 
           <div class="row">
 
-              <div class="input-field col l2 offset-l1 s5 offset-l1">
-                <select multiple id="Change" name="Change">
-                  <option value="" disabled selected>Change</option>
-                  <option value="1">Dollars</option>
-                  <option value="2">Euros</option>
-                </select>
-              </div>
-
-              <div class="input-field col l2 offset-l1 s5 offset-l1">
+               <div class="input-field col l2 offset-l1 s5 offset-l1">
                 <select multiple id="Type" name="Type">
                   <option value="" disabled selected>Type</option>
-                  <option value="1">Dior</option>
-                  <option value="2">YSL</option>
+                 
+                  <option value="1">YSL</option>
                 </select>
               </div>
             
@@ -39,16 +34,30 @@
               <div class="input-field col l2 offset-l1 s5 offset-l1">
                 <select multiple id="Marque" name="Marque">
                   <option value="" disabled selected>Marque</option>
-                  <option value="1">Dior</option>
-                  <option value="2">YSL</option>
+                  <?php 
+                
+                include('php/database.fn.php');
+                $sql = "SELECT * FROM marque;";
+                $result = mysqli_query($mysqli, $sql);
+                while ($data = mysqli_fetch_assoc($result)) {
+                ?>
+                  <option value="<?php echo $data['numMarque'];?>"><?php echo $data['nomMarque'];?></option>
+                  <?php } ?>
                 </select>
               </div>
 
              <div class="input-field col l2 offset-l1 s5 offset-l1">
                 <select multiple id="Shop" name="Shop">
                   <option value="" disabled selected>Shop</option>
-                  <option value="1">Sephora</option>
-                  <option value="2">Nocibé</option>
+                  <?php 
+                
+                include('php/database.fn.php');
+                $sql = "SELECT * FROM fournisseur;";
+                $result = mysqli_query($mysqli, $sql);
+                while ($data = mysqli_fetch_assoc($result)) {
+                ?>
+                  <option value="<?php echo $data['numFournisseur'];?>"><?php echo $data['nomFournisseur'];?></option>
+                  <?php } ?>
                 </select>
               </div>
 
@@ -57,8 +66,20 @@
       
           <div class="row">
             <div class="col l4 offset-l1 s12">
-              <span>Catégorie</span>
-               <div class="chips chips-autocomplete chips-placeholder"></div>
+            <select multiple id="Categorie" name="Categorie">
+                  <option value="" disabled selected>Categorie</option>
+              
+              <?php 
+                
+                include('php/database.fn.php');
+                $sql = "SELECT * FROM categorie;";
+                $result = mysqli_query($mysqli, $sql);
+                while ($data = mysqli_fetch_assoc($result)) {
+                ?>
+              <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
+                  <?php } ?>
+                </select>
+              </div>
             </div>
 
             <div class="col l6 offset-l1 s12">
