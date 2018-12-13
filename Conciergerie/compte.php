@@ -29,23 +29,26 @@
             <div class="card-content">
 
               <form method="post" action="traitementMdp.php" class="formulaire col offset-l1">
+                <ul class="collapsible">
+                  <li>
+                    <div class="collapsible-header"><span>Modifier le mot de passe : </span></div>
+                    <div class="collapsible-body">
+                      <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Mot de passe actuel</label>
+                      </div>
 
-                <span>Change Password : </span>
+                      <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Nouveau mot de passe</label>
+                      </div>
 
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Current Password</label>
-                </div>
-
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">New Password</label>
-                </div>
-
-                <div class="col offset-s5">
-                  <input type="submit" value="Valider" class="waves-effect waves-light btn"/>
-                </div>
-                
+                      <div class="col offset-s5">
+                        <input type="submit" value="Valider" class="waves-effect waves-light btn"/>
+                      </div>
+                    </div>
+                  </li>
+                </ul>      
               </form>
               
             </div>
@@ -55,9 +58,10 @@
         
       </div>
           
-          <?php include_once ("footer.php"); ?>
+      <?php include_once ("footer.php"); ?>
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/myscript.js"></script>
     </body>
   </html>
