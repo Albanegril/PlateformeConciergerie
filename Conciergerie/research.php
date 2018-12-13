@@ -9,7 +9,7 @@
             <div class="col l6 offset-l3 s10 offset-s1">
 
                 <div class="input-field col s12">
-                  <i class="material-icons prefix" onchange="rechercherProduit()">search</i>
+                  <i class="material-icons prefix" onchange="dataReserarch()">search</i>
                   <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
                   <label for="autocomplete-input">Recherche ...</label>
                 </div>
@@ -36,7 +36,7 @@
                   <option value="" disabled selected>Marque</option>
                   <?php 
                 
-                include('php/database.fn.php');
+                include('BDopen.php');
                 $sql = "SELECT * FROM marque;";
                 $result = mysqli_query($mysqli, $sql);
                 while ($data = mysqli_fetch_assoc($result)) {
@@ -51,7 +51,7 @@
                   <option value="" disabled selected>Shop</option>
                   <?php 
                 
-                include('php/database.fn.php');
+                include('BDopen.php');
                 $sql = "SELECT * FROM fournisseur;";
                 $result = mysqli_query($mysqli, $sql);
                 while ($data = mysqli_fetch_assoc($result)) {
@@ -71,7 +71,7 @@
               
               <?php 
                 
-                include('php/database.fn.php');
+                include('BDopen.php');
                 $sql = "SELECT * FROM categorie;";
                 $result = mysqli_query($mysqli, $sql);
                 while ($data = mysqli_fetch_assoc($result)) {
@@ -90,7 +90,7 @@
     
 
           <div class="col offset-s5">
-            <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn  yellow darken-2" onclick="rechercher()"/>
+            <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn  yellow darken-2" onclick="afficherproduit()"/>
           </div>
 
         </form>

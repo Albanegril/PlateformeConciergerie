@@ -1,6 +1,100 @@
-<div class="card-panel grey lighten-5" id="Resultat" >
+<div class="row">
 
-    <div class="row">
+<div class="card col l10 offset-l1 s10 offset-s1 center-top card-panel grey lighten-5 " id="Resultat" >
+<div class="row">
+      <form>
+        <div class="input-field col s2 offset-s10">
+          <select>
+            <option value="" disabled selected>Choose the order</option>
+            <option value="1">By prize</option>
+            <option value="2">By accuracy</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  <div class="row">
+  <div class="col s6 m3">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="images/coco.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>card</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="col s4 m3">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="images/coco.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>card</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s4 m3">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="images/coco.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>card</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s4 m3">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="images/coco.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>card</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col s4 m3">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="images/coco.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>card</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Link</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </div>
+    <!--<div class="row">
       <form>
         <div class="input-field col s4 offset-s8">
           <select>
@@ -51,6 +145,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
 </div>         
