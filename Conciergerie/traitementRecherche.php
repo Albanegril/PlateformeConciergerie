@@ -1,6 +1,25 @@
 <?php
-if(isset($_POST['barre']) && !empty($_POST['barre']) && isset($_POST['change']) && !empty($_POST['change']) && isset($_POST['type']) && !empty($_POST['type']) && isset($_POST['marque']) && !empty($_POST['marque']) )
- //TRAITEMENT RECHECHE  
+if(isset($_POST['autocomplete-input']) && !empty($_POST['autocomplete-input'])){// && isset($_POST['change']) && !empty($_POST['change']) && isset($_POST['type']) && !empty($_POST['type']) && isset($_POST['marque']) && !empty($_POST['marque']) )
+  $barre = htmlentities($_POST['autocomplete-input']);
+ 
+  include('BDopen.php');
+  $sql = 'SELECT nom,itemCode FROM produit,Marque where nom='.$barre.';';
+  $result = mysqli_query($mysqli, $sql);
+  $myArray = array();
+    if (mysqli_num_rows($result) == 0) {
+      echo 'Pas de resultat';
+      //Pseudo is incorrect
+      //header('Location : ../login.php?err=1');
+  } else {
+      //Pseudo is correct
+      
+          header('Location:connexion.php');
+      }
+}
+else{
+  echo "rien";
+}
+//TRAITEMENT RECHECHE  
 /*if(isset($_POST['Recherche'] )){
    
       $Autocomplet = $_POST['autocomplete-input'];
