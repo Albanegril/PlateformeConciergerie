@@ -90,7 +90,7 @@
 
                 <div class="row">
                   <div class="col offset-l1 l10 s12">
-                    <table class="">
+                    <table class="responsive-table">
                       <thead>
                           <tr>
                             <th>Original</th>
