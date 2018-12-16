@@ -14,6 +14,7 @@
 
     <body class="">
       <?php include_once ("header.php"); ?>
+      <?php include_once ("BDopen.php"); ?>
 
 
           <div class="container">
@@ -33,11 +34,11 @@
               <!-- Ajouter -->
               <div class="card-panel grey lighten-5"  id="Ajouter">
 
-                <h6>code : genération auto</h6><br>
+                <h6>code : genération auto</h6><br> <!-- comment le générer ??--> 
 
                   <div class="row">
                     <div class="input-field inline col l6 s12">
-                        Nom produit<input id="Nom" type="text" class="validate" name="Nom">
+                      Nom produit<input id="nom" type="text" class="validate" name="Nom">
                     </div>
        
                     <div class="input-field inline col l6 s12">
@@ -47,18 +48,18 @@
 
                   <div class="row">
                     <div class="input-field col l6 s12">
-                      <select>
+                      <select name="marque" id="marque">
                         <option value="" disabled selected>Choisir une Marque</option>
-                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option> <!-- value de l'option == clef du marque --> 
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option>
                       </select>
                     </div>
 
                     <div class="input-field col l6 s12">
-                      <select>
+                      <select name="fournisseur" id="fournisseur">
                         <option value="" disabled selected>Choisir un Fournisseur</option>
-                        <option value="1">Option 1</option>
+                        <option value="1">Option 1</option> <!-- value de l'option == clef du fournisseur --> 
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option>
                       </select>
@@ -72,28 +73,25 @@
                           <div class="btn-small bouton">
                           <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                           <span>Parcourir</span>
-                          <input id="affiche" type="file"  name="image">
+                          <input id="illustration" type="file"  name="illustration">
                         </div>
                         <div class="file-path-wrapper">
                           <input class="file-path validate" type="text" >
-                          <label for="affiche">Image</label>
+                          <label for="illustration">Illustration</label>
                           </div>
                         </div>
                     </div>
 
                     <div class="input-field new badge col l3 s6">
-                      <select>
+                      <select name="device" id="device">
                         <option value="1">€</option>
                         <option value="2">$</option>
                         <option value="3">£</option>
                       </select>
                     </div>
-                    <div class="input-field new badge col l3 s6"> <!-- choix =/= volumes-->
-                      <select>
-                        <option value="1">5O ml</option>
-                        <option value="2">100 ml</option>
-                        <option value="3">150 ml</option>
-                      </select>
+                    <div class="input-field new badge col l3 s6"> 
+                      <input id="volume" name="volume" type="text" class="validate">
+                      <label for="volume">Volume :</label>
                     </div>
 
                   </div>
@@ -103,16 +101,19 @@
                     <ul class="collection">
                       <li class="collection-item"> 
                         <div class="input-field">
-                          <input id="Type" type="text" class="validate">
-                          <label for="Type">Type :</label>
+                          <input id="type" name="type" type="text" class="validate">
+                          <label for="type">Type :</label>
                         </div>
                       </li>
                       <li class="collection-item">
-                        <div class="chips chips-autocomplete" id="Catégories"></div>
+                        <div class="input-field">
+                          <input id="categories" name="categories" type="text" class="validate">
+                          <label for="categories">Catégories :</label>
+                        </div>
                       </li>
                       <li class="collection-item">
                         <div class="input-field col s12">
-                          Produits inclus : <textarea id="descriptif" class="materialize-textarea"  name="details" ></textarea>
+                          <label for="descriptif">Descriptif :</label><textarea id="descriptif" class="materialize-textarea"  name="descriptif" ></textarea>
                         </div>
                       </li>
                     </ul>
@@ -120,28 +121,34 @@
                 </div>
                 
                 <div class="row">
-                    <table class="">
+                  <div class="col offset-l1 l10 s12">
+                    <table class="responsive-table">
                       <thead>
                           <tr>
                             <th>Original</th>
-                            <th>Livaison</th>
+                            <th>Saving</th>
+                            <th>Shipping</th>
                             <th>Discount</th>
+                            <th>AfterDiscount</th>
                           </tr>
                       </thead>
 
                       <tbody>
                         <tr>
-                          <td>52</td>
-                          <td>25</td>
-                          <td>36</td>
+                          <td><input id="originalP" type="number" step="0.001" class="validat col l10 s10"></td> 
+                          <td><input id="savingP" type="number" step="0.001" class="validat col l10 s10"></td> 
+                          <td><input id="shippingP" type="number" step="0.001" class="validat col l10 s10"></td>
+                          <td><input id="discountP" type="number" step="0.001" class="validat col l10 s10"></td>
+                          <td><input id="afterdiscountP" type="number" step="0.001" class="validat col l10 s10"></td> 
                         </tr>
                       </tbody>
                     </table>
+                  </div>
                 </div>
 
                 <div class="row">
                   <div class="col s12 right-align">
-                    <input type="submit" value="Ajouter" class="waves-effect waves-light btn" />
+                    <input type="submit" value="Ajouter" name="ajouter" id="ajouter" class="waves-effect waves-light btn" />
                   </div>
                 </div>
 
@@ -151,7 +158,7 @@
             <div class="card-panel grey lighten-5"  id="Modifier">
 
                 <div class="input-field col l6 s12">
-                  <select>
+                  <select name="code" id="code">
                     <option value="" disabled selected>Choisir le code du produit</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
@@ -300,7 +307,7 @@
 
                 <div class="row">
                   <div class="col s12 right-align">
-                    <input type="submit" value="Supprimer" class="waves-effect waves-light btn" />
+                    <input type="submit" value="Supprimer" name="supprimer" id="supprimer" class="waves-effect waves-light btn" />
                   </div>
                 </div>
 
