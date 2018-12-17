@@ -10,13 +10,12 @@ include_once ("BDopen.php");
     		$Connect->query($produitfinal);
     	}
     	if (isset($_POST['code'])) {
-    		$code = $_POST['code']);
+    		$code = $_POST['code'];
     		$produit += "DELETE FROM produit WHERE numProduit='$code' ";
     		$Connect->query($produit);
     		$produitfinal += "DELETE FROM produitfinal WHERE numProduit='$code' ";
     		$Connect->query($produitfinal);
     	}
     }
+    header('Location:gestionProduit.php');
 ?>
-
-

@@ -30,91 +30,130 @@
 
                     <div class="col l5 s10" >
                       <h4>Nom produit</h4>
-                      <h6 class="white-text">code258-25</h6> 
+                      <h6>code258-25</h6> 
 
-                    <form action="#" class="col l5 s5">
-                      <p>
-                        <label>
-                          <input name="volumes" type="radio" checked />
-                          <span>5O ml</span>
-                        </label>
-                      </p>
-                      <p>
-                        <label>
-                          <input name="volumes" type="radio" />
-                          <span>10O ml</span>
-                        </label>
-                      </p>
-                      <p>
-                        <label>
-                          <input name="volumes" type="radio"  />
-                          <span>15O ml</span>
-                        </label>
-                      </p>
-                    </form>
+                      <form action="#" class="col l5 s5">
+                        <p>
+                          <label>
+                            <input name="volumes" type="radio" checked />
+                            <span>5O ml</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input name="volumes" type="radio" />
+                            <span>10O ml</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input name="volumes" type="radio"  />
+                            <span>15O ml</span>
+                          </label>
+                        </p>
+                      </form>
 
-                    <div class="input-field new badge col offset-l2 l5 s5"> <!-- choix =/= volumes-->
-                        <select>
-                          <option value="1">5O ml</option>
-                          <option value="2">100 ml</option>
-                          <option value="3">150 ml</option>
-                        </select>
+                      <div class="col l2 offset-l1 s6 margeTop">
+                        <a href="marque.php">
+                          <img id="image" src="images/vuitton.png" alt="logo marque">
+                        </a> 
                       </div>
-                    </div>
-
-                    <div class="col l2 offset-l1 s6">
-                      <a href="marque.php">
-                        <img id="image" src="images/vuitton.png" alt="logo marque">
-                      </a> 
-                    </div>
-                      
-                    <div class="col l2 offset-l1 s6">
-                      <a href="fournisseur.php">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
-                      </a>
-                    </div> 
+                        
+                      <div class="col l2 offset-l1 s6 margeTop">
+                        <a href="fournisseur.php">
+                          <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                        </a>
+                      </div> 
                     
+                    </div>
+
                   </div>
 
-                </div>
-
-                <div class="row">
-                  <div class="col l10 offset-l1 s12">
-                    <ul class="collection">
-                      <li class="collection-item">Type : <span class="badge">Type</span></li>
-                      <li class="collection-item">Catégories : <span class="badge">Soins Jours</span> <span class="badge">Soins Corps</span></li>
-                      <li class="collection-item">Produits inclus : <span class="badge">Description</span></li>
-                    </ul>
+                  <div class="row">
+                    <div class="col l10 offset-l1 s12">
+                      <ul class="collection">
+                        <li class="collection-item">Type : <span class="badge">Type</span></li>
+                        <li class="collection-item">Catégories : <span class="badge">Soins Jours</span> <span class="badge">Soins Corps</span></li>
+                        <li class="collection-item">Produits inclus : <span class="badge">Description</span></li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="col offset-l1 l10 s12">
-                    <table class="responsive-table">
-                      <thead>
+                  <div class="row">
+                    <div class="col offset-l1 l10 s12">
+                      <table class="responsive-table">
+                        <thead>
+                            <tr>
+                              <th>Original</th>
+                              <th>Saving</th>
+                              <th>Shipping</th>
+                              <th>Discount</th>
+                              <th>AfterDiscount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
                           <tr>
-                            <th>Original</th>
-                            <th>Saving</th>
-                            <th>Shipping</th>
-                            <th>Discount</th>
-                            <th>AfterDiscount</th>
+                            <td>52,00 €</td> 
+                            <td>25,00 €</td> <!-- ajouter la monnaie de base grace à la BD -->
+                            <td>00,00 €</td>
+                            <td>22,00 €</td>
+                            <td><h6 class="red-text ">30,00€</h6></td> 
                           </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr>
-                          <td>52,00 €</td> 
-                          <td>25,00 €</td> <!-- ajouter la monnaie de base grace à la BD -->
-                          <td>00,00 €</td>
-                          <td>22,00 €</td>
-                          <td><h6 class="red-text ">30,00€</h6></td> 
-                        </tr>
-                      </tbody>
-                    </table>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
 
                 </div>
+
+                <ul class="collapsible">
+                  <li>
+                    <div class="collapsible-header"><span>Personnaliser / Comparer</span></div>
+                    <div class="collapsible-body">
+                      <div class="col offset-l1 l4 s12">
+                        <div class="row">
+                          <form method="post" action="traitementAffichageProduit.php" class="formulaire col offset-l1">
+                          <div class="input-field col l3 s12">
+                            <input id="marge" name="marge" type="number" step="0.001" class="validate">
+                            <label for="marge">Marge</label>
+                          </div>
+                          <div class="col offset-s5">
+                            <input type="submit" value="Appliquer" class="waves-effect waves-light btn"/>
+                          </div>
+                        </form>
+                        </div>
+                        
+                      </div>
+                        
+
+                        <div class="col l8 s12">
+                          <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                  <th>Nom Concurrence</th>
+                                  <th>Prix Min</th>
+                                  <th>Remise Fournisseur</th>
+                                  <th>Promotion</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td>..</td> 
+                                <td>..</td> 
+                                <td>..</td>
+                                <td>..</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                    </div>
+                  </li>
+                </ul>      
+              
+
             </div>
           </div>     
 

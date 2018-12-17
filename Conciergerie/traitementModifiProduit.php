@@ -42,25 +42,25 @@ include_once ("BDopen.php");
           $device = "€";
          }
 
-            if (isset($_POST['nom'];)) {
+            if (isset($_POST['nom'])) {
                 $produit += " nom='$nom', ";
             }
-            if (isset($_POST['device'];)) {
+            if (isset($_POST['device'])) {
                 $produit += " device='$device', ";
             }
-            if (isset($_POST['description'];)) {
+            if (isset($_POST['description'])) {
                 $produit += " produitsInclus='$description', ";
             }
-            if (isset($_POST['marque'];)) {
+            if (isset($_POST['marque'])) {
                 $produit += " numMarque='$marque', ";
             }
-            if (isset($_POST['type'];)) {
+            if (isset($_POST['type'])) {
                 $produit += " numTypeProduit='$type', ";
             }
-            if (isset($_POST['lien'];)) {
+            if (isset($_POST['lien'])) {
                 $produit += " URLProduit='$lien', ";
             }
-            if (isset($_POST['illustration'];)) {
+            if (isset($_POST['illustration'])) {
                 $produit += " imageProduit='$illustration' ";
             }
 
@@ -70,35 +70,36 @@ include_once ("BDopen.php");
 
           $produitfinal = "UPDATE produitfinal SET ";
 
-            if (isset($_POST['fournisseur'];)) {
+            if (isset($_POST['fournisseur'])) {
                 $produitfinal += " numFournisseur='$fournisseur', ";
             }
-            if (isset($_POST['volume'];)) {
+            if (isset($_POST['volume'])) {
                 $produitfinal += " numVolume='$volume', ";
             }
-            if (isset($_POST['discountP'];)) {
+            if (isset($_POST['discountP'])) {
                 $produitfinal += " discount='$discountP', ";
             }
-            if (isset($_POST['originalP'];)) {
+            if (isset($_POST['originalP'])) {
                 $produitfinal += " originalPrice='$originalP', ";
             }
-            if (isset($_POST['savingP'];)) {
+            if (isset($_POST['savingP'])) {
                 $produitfinal += " saving='$savingP', ";
             }
-            if (isset($_POST['shippingP'];)) {
+            if (isset($_POST['shippingP'])) {
                 $produitfinal += " shipping='$shippingP', ";
             }
-            if (isset($_POST['marge'];)) {
+            if (isset($_POST['marge'])) {
                 $produitfinal += " marge='$marge' ";
             }
-            if (isset($_POST['concurrenceMin'];)) {
+            if (isset($_POST['concurrenceMin'])) {
                 $produitfinal += " concurrenceMin='$concurrenceMin', ";
             }
-            if (isset($_POST['concurrenceNom'];)) {
+            if (isset($_POST['concurrenceNom'])) {
                 $produitfinal += " concurrenceNom='$concurrenceNom' ";
             }
 
           $produitfinal += "  WHERE numProduit='$code' "; 
           $Connect->query($produitfinal);
         }
+        header('Location:gestionProduit.php');
         ?>

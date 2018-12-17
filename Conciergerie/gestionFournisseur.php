@@ -303,37 +303,26 @@
 
             <!-- Supprimer -->
             <div class="card-panel grey lighten-5"  id="Supprimer">
-            <form method="post" action="traitementSuppProduit.php">
+            <form method="post" action="traitementSuppFournisseur.php">
               
                 <div class="row">
-                    <div class="col l6 offset-l3 s10 offset-s1">
-                        <div class="input-field col s12">
-                          <i class="material-icons prefix">search</i>
-                          <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
-                          <label for="autocomplete-input">Recherche ...</label>
-                        </div>
-                    </div>
+                  <div class="col l6 s12">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">search</i>
+                        <input type="text" id="autocomplete-input" name="autocomplete-input" class="autocomplete">
+                        <label for="autocomplete-input">Recherche ...</label>
+                      </div>
                   </div>
 
-                  <div class="row">
-                    <div class="input-field col l6 s12">
-                      <select>
-                        <option value="" disabled selected>Choisir un Nom produit</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
-
-                    <div class="input-field col l6 s12">
-                      <select>
-                        <option value="" disabled selected>Choisir un code</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
+                  <div class="input-field col l6 s12">
+                    <select>
+                      <option value="" disabled selected>Choisir une Marque</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
                   </div>
+                </div>
 
                 <div class="row">
                   <div class="col s12 right-align">

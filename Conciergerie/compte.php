@@ -14,6 +14,12 @@
 
     <body class="">
       <?php include_once ("header.php"); ?>
+      <?php include_once ("BDopen.php"); ?>
+      <?php 
+        if (isset($_SESSION['login'])) {
+            $login = htmlentities($_SESSION['login']);
+        }
+      ?>
 
       <div class="container">
 
@@ -21,8 +27,7 @@
         <div class="card-panel grey lighten-5" id="Compte">
 
           <div class="row">
-            <h6>Hello Pseudo</h6>
-            <p>Name : name</p>
+            <h6>Hello <?php echo $login; ?></h6>
           </div>
 
           <div class="col l6 s12">
@@ -34,17 +39,17 @@
                     <div class="collapsible-header"><span>Modifier le mot de passe : </span></div>
                     <div class="collapsible-body">
                       <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Mot de passe actuel</label>
+                        <input id="passwordactu" name="passwordactu" type="password" class="validate">
+                        <label for="passwordactu">Mot de passe actuel</label>
                       </div>
 
                       <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Nouveau mot de passe</label>
+                        <input id="passwordnew" name="passwordnew" type="password" class="validate">
+                        <label for="passwordnew">Nouveau mot de passe</label>
                       </div>
 
                       <div class="col offset-s5">
-                        <input type="submit" value="Valider" class="waves-effect waves-light btn"/>
+                        <input type="submit" value="Valider" class="waves-effect waves-light btn yellow darken-2"/>
                       </div>
                     </div>
                   </li>

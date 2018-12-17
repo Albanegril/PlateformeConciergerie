@@ -63,34 +63,32 @@
 
           </div>
             
-      
+        
           <div class="row">
             <div class="col l4 offset-l1 s12">
-            <select multiple id="Categorie" name="Categorie">
-                  <option value="" disabled selected>Categorie</option>
-              
-              <?php 
-                
-                include('BDopen.php');
-                $sql = "SELECT * FROM categorie;";
-                $result = mysqli_query($mysqli, $sql);
-                while ($data = mysqli_fetch_assoc($result)) {
+              <select multiple id="Categorie" name="Categorie">
+                <option value="" disabled selected>Categorie</option>
+                <?php  
+                  include('BDopen.php');
+                  $sql = "SELECT * FROM categorie;";
+                  $result = mysqli_query($mysqli, $sql);
+                  while ($data = mysqli_fetch_assoc($result)) {
                 ?>
-              <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
-                  <?php } ?>
-                </select>
-              </div>
-            </div>
+                <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
+                <?php } ?>
+              </select>
+            </div>       
 
-            <div class="col l6 offset-l1 s12">
+            <div class="col l5 offset-l1 s12">
               <span>Prix</span>
               <div id="prix-slider"></div>  
             </div>
+
           </div>
     
 
           <div class="col offset-s5">
-            <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn  yellow darken-2" onclick="afficherproduit()"/>
+            <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn yellow darken-2" onclick="afficherproduit()"/>
           </div>
 
         </form>
