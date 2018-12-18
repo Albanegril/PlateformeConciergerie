@@ -51,7 +51,6 @@ $('input.autocomplete').autocomplete({
     $('.collapsible').collapsible();
   });
 
-
   $(document).ready(function(){
     $('select').formSelect();
   });

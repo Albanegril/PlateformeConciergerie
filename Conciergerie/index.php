@@ -19,12 +19,15 @@
       <?php include_once ("header.php"); ?>
 
      
-      <div class="container">
-        <br>
-        <?php include_once ("research.php"); ?>
-        <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col offset-l1 l8 s12">
+            <?php include_once ("research.php"); ?>
+            <?php include_once ("resultat.php"); ?>
+          </div>  
 
-        <?php include_once ("resultat.php"); ?>
+          <?php include_once ("panier.php"); ?>    
+        </div>
       </div>
 
       <?php include_once ("footer.php"); ?>
@@ -35,8 +38,6 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/12.1.0/nouislider.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/myscript.js"></script>
-      <script type="text/javascript" src="js/myscript.js"></script>
-
 
       <script>
         $(document).ready(function(){
