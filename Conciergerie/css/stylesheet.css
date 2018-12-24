@@ -80,5 +80,12 @@ label
  	size: cover;
  }
 
+#Panier
+{
+  position: fixed;
+  right: 5%;
+  top: 20%;
+  height: 100%;
+}
 
 
