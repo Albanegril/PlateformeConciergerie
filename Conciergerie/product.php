@@ -111,21 +111,22 @@
                 <li>
                   <div class="collapsible-header"><span>Personnaliser / Comparer</span></div>
                   <div class="collapsible-body">
-                    <div class="col offset-l1 l4 s12">
-                      <div class="row">
-                        <form method="post" action="traitementAffichageProduit.php" class="formulaire col offset-l1">
-                        <div class="input-field col l3 s12">
-                          <input id="marge" name="marge" type="number" step="0.001" class="validate">
-                          <label for="marge">Marge</label>
+                    <div class="row">
+                      <div class="col l4 s12">
+                        <div class="row">
+                          <form method="post" action="traitementAffichageProduit.php" class="formulaire col offset-l1">
+                          <div class="input-field ">
+                            <input id="marge" name="marge" type="number" step="0.001" class="validate">
+                            <label for="marge">Marge</label>
+                          </div>
+                          <div class="col offset-s5">
+                            <input type="submit" value="Appliquer" class="waves-effect waves-light btn"/>
+                          </div>
+                        </form>
                         </div>
-                        <div class="col offset-s5">
-                          <input type="submit" value="Appliquer" class="waves-effect waves-light btn"/>
-                        </div>
-                      </form>
+                        
                       </div>
-                      
-                    </div>
-                      
+                        
 
                       <div class="col l8 s12">
                         <table class="responsive-table">
@@ -148,6 +149,8 @@
                           </tbody>
                         </table>
                       </div>
+                    </div>
+                    
 
                   </div>
                 </li>

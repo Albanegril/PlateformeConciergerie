@@ -18,10 +18,13 @@
 		      </div>
 			    <div class="collapsible-body">
 					    <div class="panel" id="Commande">
-					    	<ul>
-					      		<li><h6>Nom Produit</h6><span>PRIX</span></li>
-					      		<li><h6>Nom Produit</h6><span>PRIX</span></li>
-					      	</ul>
+					    	<div class="row">
+					    		<br>
+						    	<ul>
+						      		<li><h6>Nom Produit</h6><span>PRIX</span></li>
+						      		<li><h6>Nom Produit</h6><span>PRIX</span></li>
+						      	</ul>
+						    </div>
 					      	<div class="row">
 							  	<div class="col s12 right-align">
 							    	<input type="submit" value="Commander" name="commander" id="commander" class="waves-effect waves-light btn yellow darken-2" />
@@ -30,12 +33,17 @@
 					    </div>
 
 					    <div class="panel" id="Client">
-					      	<p>Nom</p>
-					      	<p>Numéro</p>
+					    	<div class="row">
+					    		<br>
+					    		<p>Nom</p>
+					      		<p>Numéro</p>
+					    	</div>
 					      	
-						  	<div class="col s12 right-align">
-						    	<input type="submit" value="Commander" name="commander" id="commander" class="waves-effect waves-light btn yellow darken-2" />
-						  	</div>		      	
+					      	<div class="row">
+							  	<div class="col s12 right-align">
+							    	<input type="submit" value="Changer" name="changerclient" id="changerclient" class="waves-effect waves-light btn yellow darken-2" />
+							  	</div>
+							</div>		      	
 					    </div>
 			    </div>
 		    </li>

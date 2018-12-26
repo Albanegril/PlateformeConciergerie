@@ -15,12 +15,12 @@
     <body class="">
       <?php include_once ("header.php"); ?>
       
-      <div class="container-fluid">
+      <div class="container">
 
-        <h4 class="titrePage">Fiche fournisseur</h4>
+        <h4 class="titrePage">Fiche fournisseur <br> <img id="image" src="images/nocibe.jpg" alt="logo fournisseur"></h4>
         <div class="row">
-          <div class="card-panel grey lighten-5 col offset-l1 l8 s12" id="Fournisseur">
-                        
+          <div class="card-panel grey lighten-5" id="Fournisseur">
+            <div class="row">
               <div class="row">
                 <form>
                   <div class="input-field col s4 offset-s8">
@@ -33,75 +33,69 @@
                 </form>
               </div>
 
-            
-
-              <div class="col s12 m12">
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img src="images/scandal.jpeg">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <p>Item 1</p>
+              <div class="col l6 s12">
+                <a href="product.php" class="black-text">
+                  <div class="card horizontal waves-effect waves-light">
+                    <div class="card-image">
+                      <img src="images/coco.jpg">
                     </div>
-                    <div class="card-action">
-                      <a href="product.php">Link to page item</a>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                          <h5>Item 1</h5>
+                          <p>Type, Catégorie</p>
+                          <p class="red-text">Prix</p>
+                      </div>
+                      <div class="card-action">
+                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
-              <div class="col s12 m12">
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img src="https://lorempixel.com/100/190/nature/6">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <p>Item 2</p>
+              <div class="col l6 s12">
+                <a href="product.php" class="black-text">
+                  <div class="card horizontal waves-effect waves-light">
+                    <div class="card-image">
+                      <img src="images/coco.jpg">
                     </div>
-                    <div class="card-action">
-                      <a href="#">Link to page item</a>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                          <h5>Item 1</h5>
+                          <p>Type, Catégorie</p>
+                          <p class="red-text">Prix</p>
+                      </div>
+                      <div class="card-action">
+                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
-              <div class="col s12 m12">
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img src="https://lorempixel.com/100/190/nature/6">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <p>Item 3</p>
+              <div class="col l6 s12">
+                <a href="product.php" class="black-text">
+                  <div class="card horizontal waves-effect waves-light">
+                    <div class="card-image">
+                      <img src="images/coco.jpg">
                     </div>
-                    <div class="card-action">
-                      <a href="#">Link to page item</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <!--
-              <div class="col s12 m12 texte" id="texte">
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img src="https://lorempixel.com/100/190/nature/6">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <p>Item 4</p>
-                    </div>
-                    <div class="card-action">
-                      <a href="#">Link to page item</a>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                          <h5>Item 1</h5>
+                          <p>Type, Catégorie</p>
+                          <p class="red-text">Prix</p>
+                      </div>
+                      <div class="card-action">
+                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            -->
-          
-        
-
+                </a>
+              </div>       
+            </div>
           </div>
             <!--
             <a class="btn" id="bouton_texte" onclick="afficher_cacher('texte');">Afficher plus</a>
