@@ -10,7 +10,6 @@ include_once ("BDopen.php");
         	$lien = $_POST['lien'];
         	$marque = $_POST['marque']; // num
         	$fournisseur = $_POST['fournisseur']; // num
-        	$lien = $_POST['lien'];
 
          $illustration = $_POST['illustration']; /// quoi ??
          $code = $_POST['code']; /// ???? comment 

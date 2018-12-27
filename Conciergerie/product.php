@@ -158,6 +158,7 @@
             
 
             </div>
+            <?php include_once ("panier.php"); ?>   
           </div>
         </div>     
 

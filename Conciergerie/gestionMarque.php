@@ -49,7 +49,7 @@
 
                   <div class="col l6 s12">
                       <div class="file-field input-field">
-                        <div class="btn-small yellow darken-2">
+                        <div class="btn-small yellow darken-2 black-text">
                         <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                         <span>Parcourir</span>
                         <input id="illustration" type="file"  name="illustration">
@@ -92,7 +92,7 @@
                 <div class="row">
                   <div class="col l6 s12">
                       <div class="file-field input-field">
-                        <div class="btn-small yellow darken-2">
+                        <div class="btn-small yellow darken-2 black-text">
                         <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                         <span>Parcourir</span>
                         <input id="illustration" type="file"  name="illustration">

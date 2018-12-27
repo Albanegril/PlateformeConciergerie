@@ -20,14 +20,15 @@
 					    <div class="panel" id="Commande">
 					    	<div class="row">
 					    		<br>
-						    	<ul>
-						      		<li><h6>Nom Produit</h6><span>PRIX</span></li>
-						      		<li><h6>Nom Produit</h6><span>PRIX</span></li>
+						    	<ul class="collection">
+						      		<li class="collection-item"><span>Nom Produit</span><span class="badge">prix €</span></li>
+						      		<li class="collection-item"><span>Nom Produit</span><span class="badge">prix €</span></li>
+						      		<li class="collection-item active black-text yellow darken-2"><span> TOTAL </span></li>
 						      	</ul>
 						    </div>
 					      	<div class="row">
 							  	<div class="col s12 right-align">
-							    	<input type="submit" value="Commander" name="commander" id="commander" class="waves-effect waves-light btn yellow darken-2" />
+							    	<a href="commander.php"><input type="submit" value="Commander" name="commander" id="commander" class="waves-effect waves-light btn yellow darken-2" /></a>
 							  	</div>
 							</div>
 					    </div>
