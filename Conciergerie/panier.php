@@ -21,8 +21,8 @@
 					    	<div class="row">
 					    		<br>
 						    	<ul class="collection">
-						      		<li class="collection-item"><span>Nom Produit</span><span class="badge">prix €</span></li>
-						      		<li class="collection-item"><span>Nom Produit</span><span class="badge">prix €</span></li>
+						      		<li class="collection-item"><span class="badge">prix €</span>Nom Produit</li>
+						      		<li class="collection-item"><span class="badge">prix €</span>Nom Produit</li>
 						      		<li class="collection-item active black-text yellow darken-2"><span> TOTAL </span></li>
 						      	</ul>
 						    </div>

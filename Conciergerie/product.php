@@ -21,9 +21,11 @@
           <div class="row">
             <div class="card-panel grey lighten-5 col offset-l1 l8 s12"  id="Product">
 
+                <span class="badge"><a class="btn-floating btn-large waves-effect waves-light yellow darken-2" align="right"><i class="material-icons">shopping_basket</i></a></span>
               <div class="row">
-                <div class="col offset-l1 l10 s12">
 
+                <div class="col offset-l1 l10 s12">
+                  
                   <div class="col l5 s12">
                     <img class="card-image" src="images/scandal.jpeg"  >
                   </div>
@@ -98,7 +100,7 @@
                           <td>25,00 €</td> <!-- ajouter la monnaie de base grace à la BD -->
                           <td>00,00 €</td>
                           <td>22,00 €</td>
-                          <td><h6 class="red-text ">30,00€</h6></td> 
+                          <td class="yellow darken-2"><h6>30,00€</h6></td> 
                         </tr>
                       </tbody>
                     </table>
@@ -120,7 +122,7 @@
                             <label for="marge">Marge</label>
                           </div>
                           <div class="col offset-s5">
-                            <input type="submit" value="Appliquer" class="waves-effect waves-light btn"/>
+                            <input type="submit" value="Appliquer" class="waves-effect waves-light btn yellow darken-2"/>
                           </div>
                         </form>
                         </div>

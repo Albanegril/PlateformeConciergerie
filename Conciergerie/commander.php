@@ -83,28 +83,26 @@
                               </tbody>
                             </table>
                           </li>
-                          <li class="collection-item active black-text yellow darken-2"><span class="align-right yellow darken-2"> TOTAL </span></li>
+                          <li class="collection-item active black-text yellow darken-2 right-align">TOTAL</li>
                         </ul> 
                     </div>
 
                 </div>
 
                 <div class="col offset-l1 l10 s12" id="recapFidelite">
-                  <div class="row">
-                    <span>Points de Fidélité : .. nombre de points </span>
-                    <span class="badge"><a class="waves-effect waves-light btn black-text yellow darken-2 modal-trigger" href="#modalUtiliser">Utiliser</a></span>
-                  </div>
-                    
-                    <div class="row hide">
-                        <ul class="collection">
-                          <li class="collection-item"><span>Nom Produit</span><span class="badge"> nb points</span></li>
-                          <li class="collection-item active black-text yellow darken-2"><span> TOTAL points utilisés </span></li>
-                        </ul>
-                    </div>
+                  <ul class="collection">
+                    <li class="collection-item">
+                      <span class="badge"><a class="waves-effect waves-light btn black-text yellow darken-2 modal-trigger" href="#modalUtiliser">Utiliser</a></span>
+                      <span>Points de Fidélité : .. nombre de points </span>
+                    </li>
+                 
+                    <li class="hide collection-item"><span>Nom Produit</span><span class="badge"> nb points</span></li>
+                    <li class="hide collection-item active black-text yellow darken-2 right-align"><span> TOTAL points utilisés </span></li>
+                  </ul>
                 </div>
 
-                <div class="col offset-l1 l10 s12">
-                  <a href="commander.php"><input type="submit" value="Valider" name="validercommande" id="validercommande" class="waves-effect waves-light btn yellow darken-2" /></a>
+                <div class="col offset-l1 l10 s12 center-align margeTop">
+                  <a href="commander.php"><input type="submit" value="Valider" name="validercommande" id="validercommande" class="waves-effect waves-light btn-large yellow darken-2"/></a>
                 </div>
                 
               </div>
