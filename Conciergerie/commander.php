@@ -107,7 +107,8 @@
                 
               </div>
             </div>
-            <?php include_once ("panier.php"); ?>   
+            <div class="hide-on-med-and-down"><?php include_once ("panier.php"); ?></div>
+               
           </div>
         </div> 
 

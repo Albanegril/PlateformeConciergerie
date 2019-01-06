@@ -16,9 +16,21 @@
       <?php include_once ("header.php"); ?>
 
         <div class="container-fluid">
-
           <h4 class="titrePage">Fiche Produit</h4>
           <div class="row">
+
+          <?php
+
+        $item = $_GET['item'];
+
+        if(isset($item))
+        {
+
+          $Query="SELECT numProduit, nom, device, produitsInclus, numMarque, numTypeProduit, URLProduit, imageProduit FROM produit WHERE numProduit = '$item'";
+              $produit  = $Connect->query($Query);
+              $Data = mysqli_fetch_array($produit);
+          
+                echo '
             <div class="card-panel grey lighten-5 col offset-l1 l8 s12"  id="Product">
 
                 <span class="badge"><a class="btn-floating btn-large waves-effect waves-light yellow darken-2" align="right"><i class="material-icons">shopping_basket</i></a></span>
@@ -27,12 +39,12 @@
                 <div class="col offset-l1 l10 s12">
                   
                   <div class="col l5 s12">
-                    <img class="card-image" src="images/scandal.jpeg"  >
+                    <img class="card-image" src="images/'.$Data[7].'"  >
                   </div>
 
                   <div class="col l5 s10" >
-                    <h4>Nom produit</h4>
-                    <h6>code258-25</h6> 
+                    <h4>'.$Data[1].'</h4>
+                    <h6>code '.$Data[0].'</h6> 
 
                     <form action="#" class="col l5 s5">
                       <p>
@@ -76,7 +88,7 @@
                     <ul class="collection">
                       <li class="collection-item">Type : <span class="badge">Type</span></li>
                       <li class="collection-item">Catégories : <span class="badge">Soins Jours</span> <span class="badge">Soins Corps</span></li>
-                      <li class="collection-item">Produits inclus : <span class="badge">Description</span></li>
+                      <li class="collection-item">Produits inclus : <span class="badge">'.$Data[3].'</span></li>
                     </ul>
                   </div>
                 </div>
@@ -160,6 +172,10 @@
             
 
             </div>
+                    ';
+        }
+      ?>
+            
             <?php include_once ("panier.php"); ?>   
           </div>
         </div>     

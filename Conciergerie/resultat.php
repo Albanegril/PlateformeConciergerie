@@ -12,28 +12,38 @@
   </div>
 
   <div class="row">
-    
-    <div class="col l6 s12">
-      <a href="product.php" class="black-text">
-        <div class="card horizontal waves-effect waves-light">
-          <div class="card-image">
-            <img src="images/coco.jpg">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-                <h5>Item 1</h5>
-                <p>Type, Catégorie</p>
-                <p class="red-text">Prix</p>
-            </div>
-            <div class="card-action">
-              <img id="image" src="images/vuitton.png" alt="logo marque">
-              <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
+    <?php
 
+      $Query="SELECT numProduit, nom, numMarque, numTypeProduit, imageProduit FROM produit";
+      $item  = $Connect->query($Query);
+
+            while ($Data = mysqli_fetch_array($item)){
+          echo '
+              <div class="col l6 s12">
+                <a href="product.php?item='.$Data[0].'" class="black-text">
+                  <div class="card horizontal waves-effect waves-light">
+                    <div class="card-image">
+                      <img src="images/'.$Data[4].'">
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                          <h5>'.$Data[1].'</h5>
+                          <p>'.$Data[2].'</p>
+                          <p> Volume </p>
+                          <p class="red-text"> Prix</p>
+                      </div>
+                      <div class="card-action">
+                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              '; 
+          }  
+              
+    ?>
 
     <div class="col l6 s12">
       <a href="product.php" class="black-text">
