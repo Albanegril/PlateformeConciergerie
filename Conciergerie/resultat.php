@@ -14,10 +14,13 @@
   <div class="row">
     <?php
 
-      $Query="SELECT numProduit, nom, numMarque, numTypeProduit, imageProduit FROM produit";
-      $item  = $Connect->query($Query);
+      $Query="SELECT numProduitFinal, FROM produitfinal";
+      $final  = $Connect->query($Query);
 
-            while ($Data = mysqli_fetch_array($item)){
+            while ($Data = mysqli_fetch_array($final)){
+              $Query="SELECT numFournisseur, numVolume, numProduit, originalPrice FROM produitfinal WHERE numProduitFinal ='$final'";
+              imageProduit, nom, / nomTypeProduit, / nomCategorie, / quantiteVolume, typeVolume, / originalPrice, / imageMarque, /imageFournisseur
+              $item  = $Connect->query($Query);
           echo '
               <div class="col l6 s12">
                 <a href="product.php?item='.$Data[0].'" class="black-text">
