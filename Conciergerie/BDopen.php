@@ -3,7 +3,9 @@
 	$User="root";
 	$Pwd="";
 	$DB="conciergerie";
-	$mysqli = mysqli_connect($Server, $User, $Pwd, $DB);
-	
+	$Connect = mysqli_connect($Server, $User, $Pwd, $DB);
+	if (!$Connect){
+		echo "Echec connexion à la base";
+	} 
 
 ?>

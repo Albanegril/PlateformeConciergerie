@@ -13,6 +13,7 @@
     </head>
 
     <body class="">
+      <?php include_once ("BDopen.php"); ?>
       <?php include_once ("header.php"); ?>
 
         <div class="container-fluid">
@@ -26,7 +27,7 @@
         if(isset($item))
         {
 
-          $Query="SELECT nom, imageProduit, typeVolume, quantiteVolume, numMarque, imageMarque, numFournisseur, imageFournisseur, nomTypeProduit, nomCategorie, produitsInclus, URLProduit, device, originalPrice, saving, shipping, discount, marge, concurrenceMin, concurrenceNom FROM produitfinal NATURAL JOIN produit NATURAL JOIN typeproduit NATURAL JOIN categorie NATURAL JOIN typeproduitcategorie NATURAL JOIN marque NATURAL JOIN fournisseur NATURAL JOIN volume WHERE numProduitFinal= '$item';";
+          $Query="SELECT nom, imageProduit, typeVolume, quantiteVolume, numMarque, imageMarque, numFournisseur, imageFournisseur, nomTypeProduit, nomCategorie, produitsInclus, URLProduit, device, originalPrice, saving, shipping, discount FROM produitfinal NATURAL JOIN produit NATURAL JOIN typeproduit NATURAL JOIN categorie NATURAL JOIN typeproduitcategorie NATURAL JOIN marque NATURAL JOIN fournisseur NATURAL JOIN volume WHERE numProduitFinal='$item' GROUP BY nom;";
               $produit  = $Connect->query($Query);
               $Data = mysqli_fetch_array($produit);
           
@@ -39,7 +40,7 @@
                 <div class="col offset-l1 l10 s12">
                   
                   <div class="col l5 s12">
-                    <img class="card-image" src="images/'.$Data[1].'"  >
+                    <img class="card-image" src="images/'.$Data[1].'">
                   </div>
 
                   <div class="col l5 s10" >
@@ -130,7 +131,7 @@
                         <div class="row">
                           <form method="post" action="traitementAffichageProduit.php" class="formulaire col offset-l1">
                           <div class="input-field ">
-                            <input id="marge" name="marge" type="number" step="0.001" value="'.$Data[17].'" class="validate">
+                            <input id="marge" name="marge" type="number" step="0.001" value="Marge" class="validate">
                             <label for="marge">Marge</label>
                           </div>
                           <div class="col offset-s5">
@@ -155,8 +156,8 @@
 
                           <tbody>
                             <tr>
-                              <td>'.$Data[19].'</td> 
-                              <td>'.$Data[18].'</td> 
+                              <td>..</td> 
+                              <td>..</td> 
                               <td>..</td>
                               <td>..</td>
                             </tr>

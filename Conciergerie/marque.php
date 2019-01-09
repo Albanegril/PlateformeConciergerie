@@ -13,6 +13,7 @@
     </head>
 
     <body class="">
+      <?php include_once ("BDopen.php"); ?>
       <?php include_once ("header.php"); ?>
       
       <div class="container">
@@ -98,9 +99,6 @@
               </div>
             </div>
           </div>
-            <!--
-            <a class="btn" id="bouton_texte" onclick="afficher_cacher('texte');">Afficher plus</a>
-            -->
 
             <div class="fixed-action-btn" id="myBtn" onclick="topFunction()">
               <a class="btn-floating btn red">
