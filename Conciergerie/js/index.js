@@ -31,6 +31,7 @@ $('input.autocomplete').autocomplete({
       },
     });
 
+   
 function research(){
     $post(
         'traitementRecherche.php',
@@ -40,6 +41,20 @@ function research(){
             type:$('#Type').val(),
             marque:$('#Marque').val(),
             shop:$('#Shop').val()
+
+        },
+        function (data)
+        {
+            
+        }
+    );
+}
+
+function research(){
+    $post(
+        'barre.php',
+        {
+            
 
         },
         function (data)
