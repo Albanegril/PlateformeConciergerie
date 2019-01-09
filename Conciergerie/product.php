@@ -26,7 +26,7 @@
         if(isset($item))
         {
 
-          $Query="SELECT numProduit, nom, device, produitsInclus, numMarque, numTypeProduit, URLProduit, imageProduit FROM produit WHERE numProduit = '$item'";
+          $Query="SELECT nom, imageProduit, typeVolume, quantiteVolume, numMarque, imageMarque, numFournisseur, imageFournisseur, nomTypeProduit, nomCategorie, produitsInclus, URLProduit, device, originalPrice, saving, shipping, discount, marge, concurrenceMin, concurrenceNom FROM produitfinal NATURAL JOIN produit NATURAL JOIN typeproduit NATURAL JOIN categorie NATURAL JOIN typeproduitcategorie NATURAL JOIN marque NATURAL JOIN fournisseur NATURAL JOIN volume WHERE numProduitFinal= '$item';";
               $produit  = $Connect->query($Query);
               $Data = mysqli_fetch_array($produit);
           
@@ -39,18 +39,18 @@
                 <div class="col offset-l1 l10 s12">
                   
                   <div class="col l5 s12">
-                    <img class="card-image" src="images/'.$Data[7].'"  >
+                    <img class="card-image" src="images/'.$Data[1].'"  >
                   </div>
 
                   <div class="col l5 s10" >
-                    <h4>'.$Data[1].'</h4>
-                    <h6>code '.$Data[0].'</h6> 
+                    <h4>'.$Data[0].'</h4>
+                    <h6>code à créer </h6> 
 
-                    <form action="#" class="col l5 s5">
+                    <form action="#" class="col l5 s5"> <!-- A GENERER PAR JS-->
                       <p>
                         <label>
                           <input name="volumes" type="radio" checked />
-                          <span>5O ml</span>
+                          <span>'.$Data[3].' '.$Data[2].'</span>
                         </label>
                       </p>
                       <p>
@@ -68,14 +68,14 @@
                     </form>
 
                     <div class="col l2 offset-l1 s6 margeTop">
-                      <a href="marque.php">
-                        <img id="image" src="images/vuitton.png" alt="logo marque">
+                      <a href="marque.php?item='.$Data[4].'">
+                        <img id="image" src="images/'.$Data[5].'" alt="logo marque">
                       </a> 
                     </div>
                       
                     <div class="col l2 offset-l1 s6 margeTop">
-                      <a href="fournisseur.php">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
+                      <a href="fournisseur.php?item='.$Data[6].'">
+                        <img id="image" src="images/'.$Data[7].'" alt="logo fournisseur">
                       </a>
                     </div> 
                   
@@ -86,9 +86,9 @@
                 <div class="row">
                   <div class="col l10 offset-l1 s12">
                     <ul class="collection">
-                      <li class="collection-item">Type : <span class="badge">Type</span></li>
-                      <li class="collection-item">Catégories : <span class="badge">Soins Jours</span> <span class="badge">Soins Corps</span></li>
-                      <li class="collection-item">Produits inclus : <span class="badge">'.$Data[3].'</span></li>
+                      <li class="collection-item">Type : <span class="badge">'.$Data[8].'</span></li>
+                      <li class="collection-item">Catégories : <span class="badge">'.$Data[9].'</span> <span class="badge">Soins Corps</span></li>
+                      <li class="collection-item">Produits inclus : <span class="badge">'.$Data[10].'</span></li>
                     </ul>
                   </div>
                 </div>
@@ -108,11 +108,11 @@
 
                       <tbody>
                         <tr>
-                          <td>52,00 €</td> 
-                          <td>25,00 €</td> <!-- ajouter la monnaie de base grace à la BD -->
-                          <td>00,00 €</td>
-                          <td>22,00 €</td>
-                          <td class="yellow darken-2"><h6>30,00€</h6></td> 
+                          <td>'.$Data[13].' '.$Data[12].'</td> 
+                          <td>'.$Data[14].' '.$Data[12].'</td> 
+                          <td>'.$Data[15].' '.$Data[12].'</td>
+                          <td>'.$Data[16].' '.$Data[12].'</td>
+                          <td class="yellow darken-2"><h6>30,00 '.$Data[12].'</h6></td> <!-- A CALCULER !-->
                         </tr>
                       </tbody>
                     </table>
@@ -130,7 +130,7 @@
                         <div class="row">
                           <form method="post" action="traitementAffichageProduit.php" class="formulaire col offset-l1">
                           <div class="input-field ">
-                            <input id="marge" name="marge" type="number" step="0.001" class="validate">
+                            <input id="marge" name="marge" type="number" step="0.001" value="'.$Data[17].'" class="validate">
                             <label for="marge">Marge</label>
                           </div>
                           <div class="col offset-s5">
@@ -155,8 +155,8 @@
 
                           <tbody>
                             <tr>
-                              <td>..</td> 
-                              <td>..</td> 
+                              <td>'.$Data[19].'</td> 
+                              <td>'.$Data[18].'</td> 
                               <td>..</td>
                               <td>..</td>
                             </tr>

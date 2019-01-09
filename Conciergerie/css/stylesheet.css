@@ -87,6 +87,15 @@ label
   right: 5%;
   top: 20%;
   height: 100%;
+  
+  margin: 0px, -10px, 0px, -10px !important; 
+  
 }
 
+#Panier .card-panel
+{
+  padding: -10px, -10px, -10px, 0px !important;
+}
+
+/* (haut, droite, bas, gauche) */
 

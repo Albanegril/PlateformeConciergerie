@@ -44,7 +44,7 @@
                   <div class="row">
                     <span>Num Commande : </span>
                     
-                    <span class="badge"><a class="btn-floating btn-large waves-effect waves-light yellow darken-2" align="right"><i class="material-icons">shopping_basket</i></a></span>
+                    <span class="badge"><a class="btn-floating btn-large waves-effect waves-light yellow darken-2 black-text"" align="right"><i class="material-icons">shopping_basket</i></a></span>
                     
                   </div>
                     

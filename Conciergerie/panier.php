@@ -1,6 +1,6 @@
 <div class="col l2 s10 offset-s1"  id="Panier">
-	<div class="row">
-		<ul class="grey lighten-5">
+	
+		<ul class="card-panel grey lighten-5">
 		    <li>
 		      				
 				<div class="row">
@@ -15,7 +15,7 @@
 			    </div>
 			   
 			   
-			    <div class="panel" id="Commande">
+			    <div class="" id="Commande">
 
 				    	<ul class="collection">
 				      		<li class="collection-item"><span class="badge">prix €</span>Nom Produit</li>
@@ -29,7 +29,7 @@
 
 			    </div>
 
-			    <div class="panel" id="Client">
+			    <div class="" id="Client">
 
 			    		<p>Nom</p>
 			      		<p>Numéro</p>
@@ -40,5 +40,5 @@
 			 
 		    </li>
 		</ul>    
-	</div> 	
+	 	
 </div>

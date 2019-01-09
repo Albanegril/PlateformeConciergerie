@@ -16,8 +16,20 @@
       <?php include_once ("header.php"); ?>
       
       <div class="container">
+         <?php
 
-        <h4 class="titrePage">Fiche Marque <br> <img id="image" src="images/vuitton.png" alt="logo marque"></h4>
+        $item = $_GET['item'];
+
+        if(isset($item))
+        {
+
+          $Query="SELECT nomMarque, imageMarque FROM marque WHERE numMarque= '$item';";
+              $produit  = $Connect->query($Query);
+              $Data = mysqli_fetch_array($produit);
+          
+                echo '
+
+        <h4 class="titrePage">Fiche Marque : '.$Data[0].' <br> <img id="image" src="images/'.$Data[1].'" alt="logo marque"></h4>
         <div class="row">
 
           <div class="card-panel grey lighten-5" id="Marque" >
@@ -96,6 +108,9 @@
               </a>
             </div>
           </div>
+          ';
+        }
+      ?>
         </div>
       <?php include_once ("footer.php"); ?>
 

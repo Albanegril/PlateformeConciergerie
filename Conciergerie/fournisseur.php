@@ -16,8 +16,20 @@
       <?php include_once ("header.php"); ?>
       
       <div class="container">
+        <?php
 
-        <h4 class="titrePage">Fiche fournisseur <br> <img id="image" src="images/nocibe.jpg" alt="logo fournisseur"></h4>
+        $item = $_GET['item'];
+
+        if(isset($item))
+        {
+
+          $Query="SELECT nomFournisseur, imageFournisseur FROM fournisseur WHERE numFournisseur= '$item';";
+              $produit  = $Connect->query($Query);
+              $Data = mysqli_fetch_array($produit);
+          
+                echo '
+
+        <h4 class="titrePage">Fiche fournisseur : '.$Data[0].' <br> <img id="image" src="images/'.$Data[1].'" alt="logo fournisseur"></h4>
         <div class="row">
           <div class="card-panel grey lighten-5" id="Fournisseur">
             <div class="row">
@@ -107,6 +119,9 @@
               </a>
             </div>
           </div>
+          ';
+        }
+      ?>
         </div>
       <?php include_once ("footer.php"); ?>
 
