@@ -1,7 +1,7 @@
 <?php
 include('../BDopen.php');
 
-$sql = 'SELECT * FROM produit;';
+$sql = 'select numfournisseur,nom,nomTypeProduit,nomCategorie,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join typeproduitcategorie natural join categorie natural join volume natural join marque;';
 $result = mysqli_query($mysqli, $sql);
 $myArray = array();
 if ($result) {
