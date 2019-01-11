@@ -5,18 +5,18 @@
 
     include("BDopen.php");
     //echo 'reussi';
-    $sql = 'SELECT * FROM concierge WHERE login ="'.$login.'";';
-    $result = mysqli_query($mysqli, $sql);
+    $Query = 'SELECT login, password FROM concierge WHERE login ="'.$login.'";';
+    $sql  = $Connect->query($Query);
+    $result = mysqli_fetch_array($sql);
     
 
-    if (mysqli_num_rows($result) == 0) {
+    if ($result == 0) {
         //Pseudo is incorrect
-       // header('Location : ../connexion.php?err=1');
+       header('Location : ../connexion.php?err=1');
         
     } else {
         //Pseudo is correct
-        $data = mysqli_fetch_assoc($result);
-        $passwordHash = $data['password'];
+        $passwordHash = $result[1];
         $hashed_password = password_hash($data['password'],PASSWORD_DEFAULT);
         
         if (password_verify($pass,$hashed_password)) {
