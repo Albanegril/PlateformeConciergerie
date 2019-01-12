@@ -3,24 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 09 Janvier 2019 à 12:34
+-- Généré le :  Ven 11 Janvier 2019 à 21:19
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-DROP TABLE IF EXISTS client;
-DROP TABLE IF EXISTS commande;
-DROP TABLE IF EXISTS concierge;
-DROP TABLE IF EXISTS fournisseur;
-DROP TABLE IF EXISTS marque;
-DROP TABLE IF EXISTS produit;
-DROP TABLE IF EXISTS produitfinal;
-DROP TABLE IF EXISTS tabledechange;
-DROP TABLE IF EXISTS typeproduit;
-DROP TABLE IF EXISTS typeproduitcategorie;
-DROP TABLE IF EXISTS volume;
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -198,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
   PRIMARY KEY (`numProduit`),
   KEY `numMarque` (`numMarque`),
   KEY `numTypeProduit` (`numTypeProduit`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `produit`
@@ -219,22 +207,22 @@ CREATE TABLE IF NOT EXISTS `produitfinal` (
   `numProduitFinal` int(10) NOT NULL AUTO_INCREMENT,
   `numFournisseur` int(10) unsigned NOT NULL,
   `numVolume` int(10) unsigned NOT NULL,
-  `itemCode` int(10) unsigned NOT NULL,
+  `numProduit` int(10) unsigned NOT NULL,
   `discount` double NOT NULL,
   `originalPrice` double NOT NULL,
   `saving` double NOT NULL,
   `shipping` double NOT NULL,
   PRIMARY KEY (`numProduitFinal`),
-  KEY `numFournisseur` (`numFournisseur`,`numVolume`,`itemCode`),
+  KEY `numFournisseur` (`numFournisseur`,`numVolume`,`numProduit`),
   KEY `numVolume` (`numVolume`),
-  KEY `numProduit` (`itemCode`)
+  KEY `numProduit` (`numProduit`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `produitfinal`
 --
 
-INSERT INTO `produitfinal` (`numProduitFinal`, `numFournisseur`, `numVolume`, `itemCode`, `discount`, `originalPrice`, `saving`, `shipping`) VALUES
+INSERT INTO `produitfinal` (`numProduitFinal`, `numFournisseur`, `numVolume`, `numProduit`, `discount`, `originalPrice`, `saving`, `shipping`) VALUES
 (1, 1, 2, 1, 0.12, 40, 10, 0),
 (2, 1, 4, 2, 0.12, 15.5, 10, 15),
 (3, 3, 3, 3, 0.12, 90.99, 15, 0),
@@ -343,7 +331,7 @@ ALTER TABLE `produit`
 --
 ALTER TABLE `produitfinal`
   ADD CONSTRAINT `fk_Fournisseur_ProduitFinal` FOREIGN KEY (`numFournisseur`) REFERENCES `fournisseur` (`numFournisseur`),
-  ADD CONSTRAINT `fk_Produit_ProduitFinal` FOREIGN KEY (`itemCode`) REFERENCES `produit` (`numProduit`),
+  ADD CONSTRAINT `fk_Produit_ProduitFinal` FOREIGN KEY (`numProduit`) REFERENCES `produit` (`numProduit`),
   ADD CONSTRAINT `fk_Volume_ProduitFinal` FOREIGN KEY (`numVolume`) REFERENCES `volume` (`numVolume`);
 
 --
