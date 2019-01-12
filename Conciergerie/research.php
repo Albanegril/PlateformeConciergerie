@@ -20,8 +20,13 @@
            <div class="input-field col l2 offset-l1 s5 offset-l1">
             <select multiple id="Type" name="Type">
               <option value="" disabled selected>Type</option>
-             
-              <option value="1">YSL</option>
+              <?php 
+              $sql = "SELECT * FROM typeproduit;";
+              $result = mysqli_query($mysqli, $sql);
+              while ($data = mysqli_fetch_assoc($result)) {
+              ?>
+              <option value="<?php echo $data['numTypeProduit'];?>"><?php echo $data['nomTypeProduit'];?></option>
+              <?php } ?>
             </select>
           </div>
         
@@ -56,7 +61,7 @@
         
     
       <div class="row">
-        <div class="col l4 offset-l1 s12">
+        <div class="col l5 offset-l1 s12">
           <select multiple id="Categorie" name="Categorie">
             <option value="" disabled selected>Categorie</option>
             <?php  
@@ -67,13 +72,25 @@
             <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
             <?php } ?>
           </select>
-        </div>       
+        </div> 
 
+        <div class="col l5 offset-l1 s12"> 
+            <select>
+              <option value="" disabled selected>Prix</option>
+              <option value="1"> inf 10€ </option>
+              <option value="2"> de 10€ à 50€ </option>
+              <option value="3"> de 50€ à 100€</option>
+              <option value="3"> de 100€ à 200€</option>
+              <option value="3"> sup 200€</option>
+            </select>
+        </div>      
+
+<!--
         <div class="col l5 offset-l1 s12">
           <span>Prix</span>
           <div id="prix-slider"></div>  
         </div>
-
+-->
       </div>
 
 

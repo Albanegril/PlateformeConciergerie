@@ -78,16 +78,9 @@
                   <div class="row">
 
                     <div class="col l6 s12">
-                        <div class="file-field input-field">
-                          <div class="btn-small yellow darken-2 black-text">
-                          <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                          <span>Parcourir</span>
-                          <input id="illustration" type="file"  name="illustration">
-                        </div>
-                        <div class="file-path-wrapper">
-                          <input class="file-path validate" type="text" >
-                          <label for="illustration">Illustration</label>
-                          </div>
+                        <div class="input-field">
+                          <input id="illustration" name="illustration" type="text" class="validate">
+                          <label for="illustration">illustration :</label>
                         </div>
                     </div>
 
@@ -216,16 +209,9 @@
                   <div class="row">
 
                     <div class="col l6 s12">
-                        <div class="file-field input-field">
-                          <div class="btn-small yellow darken-2 black-text">
-                          <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                          <span>Parcourir</span>
-                          <input id="illustration" type="file"  name="illustration">
-                        </div>
-                        <div class="file-path-wrapper">
-                          <input class="file-path validate" type="text" >
-                          <label for="illustration">Illustration</label>
-                          </div>
+                        <div class="input-field">
+                          <input id="illustration" name="illustration" type="text" class="validate">
+                          <label for="illustration">illustration :</label>
                         </div>
                     </div>
 
@@ -352,7 +338,6 @@
 
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
       <script type="text/javascript" src="js/myscript.js"></script>
 
    

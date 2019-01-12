@@ -9,8 +9,8 @@ include_once ("BDopen.php");
             $nom = $_POST['nom'];
             $lien = $_POST['lien'];
 
-         $illustration = $_POST['illustration']; /// quoi ??
-         $code = $_POST['code']; /// ???? comment 
+         $illustration = $_POST['illustration']; /// nom image
+         $code = $_POST['code']; 
 
             if (isset($_POST['nom'])) {
                 $fournisseur += " nomFournisseur='$nom', ";

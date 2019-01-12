@@ -1,14 +1,14 @@
 <?php
 include_once ("BDopen.php");
-        if(isset($_POST['ajouter']) && isset($_POST['nom']) && isset($_POST['lien']) && isset($_POST['marque']) && isset($_POST['fournisseur']) && isset($illustration = $_POST['illustration']) && isset($code = $_POST['code']) && isset($_POST['device']) && isset($_POST['volume']) && isset($_POST['type']) && isset($_POST['categories']) && isset($_POST['descriptif']) && isset($_POST['originalP']) && isset($_POST['savingP']) && isset($_POST['shippingP']) && isset($_POST['discountP']) && isset($_POST['afterdiscountP'])){
+        if(isset($_POST['ajouter']) && isset($_POST['nom']) && isset($_POST['lien']) && isset($_POST['marque']) && isset($_POST['fournisseur']) && isset($illustration = $_POST['illustration']) /*&& isset($code = $_POST['code']) */ && isset($_POST['device']) && isset($_POST['volume']) && isset($_POST['type']) && isset($_POST['categories']) && isset($_POST['descriptif']) && isset($_POST['originalP']) && isset($_POST['savingP']) && isset($_POST['shippingP']) && isset($_POST['discountP']) && isset($_POST['afterdiscountP'])){
             //TRAITEMENT POST 
         	$nom = $_POST['nom'];
         	$lien = $_POST['lien'];
         	$marque = $_POST['marque']; // num
         	$fournisseur = $_POST['fournisseur']; // num
 
-         $illustration = $_POST['illustration']; /// quoi ??
-         $code = $_POST['code']; /// ???? comment 
+         $illustration = $_POST['illustration']; /// nom image
+         $code = "null"// $_POST['code']; /// à générer en js dans le form 
 
         	$device = $_POST['device'];
         	$volume = $_POST['volume'];

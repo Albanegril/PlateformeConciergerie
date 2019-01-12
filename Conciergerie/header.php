@@ -39,9 +39,3 @@
       </div>
     </nav>
   </header>
-
-<script>
-  $(document).ready(function(){
-    $(".dropdown-trigger").dropdown();  
-  });
-</script>

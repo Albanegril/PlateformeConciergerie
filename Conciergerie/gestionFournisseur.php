@@ -19,7 +19,7 @@
 
           <div class="container">
 
-              <h4 class="titrePage">Fiche Gestion Marque</h4>
+              <h4 class="titrePage">Fiche Gestion Fournisseur</h4>
 
               <div class="row">
                 <div class="col s12">
@@ -46,16 +46,9 @@
 
                   <div class="col l6 s12">
                       <div class="file-field input-field">
-                        <div class="btn-small yellow darken-2 black-text">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <span>Parcourir</span>
-                        <input id="illustration" type="file"  name="illustration">
-                      </div>
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" >
-                        <label for="illustration">Logo</label>
+                        <div class="input-field">
+                          illustration<input id="illustration" name="illustration" type="text" class="validate">
                         </div>
-                      </div>
                   </div>
                   
                   <div class="row">
@@ -85,16 +78,9 @@
                 <div class="row">
                   <div class="col l6 s12">
                       <div class="file-field input-field">
-                        <div class="btn-small yellow darken-2 black-text">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                        <span>Parcourir</span>
-                        <input id="illustration" type="file"  name="illustration">
-                      </div>
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" >
-                        <label for="illustration">Logo</label>
+                        <div class="input-field">
+                          illustration <input id="illustration" name="illustration" type="text" class="validate"> 
                         </div>
-                      </div>
                   </div>
                   <div class="input-field inline col l6 s12">
                     Lien page Fournisseur<input id="lien" type="url" class="validate"  name="lien">
@@ -144,7 +130,6 @@
 
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="extras/noUiSlider/nouislider.min.js"></script>
       <script type="text/javascript" src="js/myscript.js"></script>
 
    
