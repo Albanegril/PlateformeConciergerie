@@ -5,34 +5,38 @@
 
     include("BDopen.php");
     //echo 'reussi';
-    $Query = 'SELECT login, password FROM concierge WHERE login ="'.$login.'";';
-    $sql  = $Connect->query($Query);
-    $result = mysqli_fetch_array($sql);
-    
-
-    if ($result == 0) {
-        //Pseudo is incorrect
-       header('Location : ../connexion.php?err=1');
-        
-    } else {
-        //Pseudo is correct
-        $passwordHash = $result[1];
-        $hashed_password = password_hash($data['password'],PASSWORD_DEFAULT);
-        
-        if (password_verify($pass,$hashed_password)) {
-            //Password is correct
-            session_start();
-            
-            $_SESSION['login'] = $login;
-            $_SESSION['id'] = $data['numConcierge'];
-
-            header('Location:index.php');
-            
+    $sql = 'SELECT * FROM concierge WHERE login ="'.$login.'";';
+    //$sql  = $Connect->query($Query);
+    //$result = mysqli_fetch_array($sql);
+    $result=mysqli_query($Connect,$sql);
+    if(mysqli_num_rows($result)==0){
+            //Pseudo is incorrect
+           header('Location : ../connexion.php?err=1');
+           echo 'non1';
         } else {
-            //Password is incorrect
-           
-            header('Location : ../connexion.php?err=2');
-        }
+            //Pseudo is correct
+            $data=mysqli_fetch_assoc($result);
+            $passwordHash = $data['password'];
+            //$passwordHash = $result[1];
+            $hashed_password = password_hash($data['password'],PASSWORD_DEFAULT);
+            
+            if (password_verify($pass,$hashed_password)) {
+                //Password is correct
+                echo 'oui';
+                session_start();
+                
+                $_SESSION['login'] = $login;
+                $_SESSION['id'] = $data['numConcierge'];
+    
+                header('Location:index.php');
+                
+            } else {
+                //Password is incorrect
+               echo 'non';
+                header('Location : ../connexion.php?err=2');
+            }
+        
     }
+    
 }
 ?>
