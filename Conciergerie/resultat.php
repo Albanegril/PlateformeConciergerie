@@ -18,8 +18,8 @@
       $final  = $Connect->query($Query);
 
             while ($Data = mysqli_fetch_array($final)){
-              $Query="SELECT numFournisseur, numVolume, numProduit, originalPrice FROM produitfinal WHERE numProduitFinal ='$final'";
-              imageProduit, nom, / nomTypeProduit, / nomCategorie, / quantiteVolume, typeVolume, / originalPrice, / imageMarque, /imageFournisseur
+              $Query="select numfournisseur,nom,nomTypeProduit,nomCategorie,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join typeproduitcategorie natural join categorie natural join volume natural join marque;";
+              
               $item  = $Connect->query($Query);
           echo '
               <div class="col l6 s12">

@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col offset-l1 l8 s12">
             <?php include_once ("research.php"); ?>
-            <?php include_once ("resultat.php"); ?>
+            <!--?php include_once ("resultat.php"); ?>-->
           </div>  
 
           <?php include_once ("panier.php"); ?>    
