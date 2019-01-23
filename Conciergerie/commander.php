@@ -92,7 +92,7 @@
                 <div class="col offset-l1 l10 s12" id="recapFidelite">
                   <ul class="collection">
                     <li class="collection-item">
-                      <span class="badge"><a class="waves-effect waves-light btn black-text yellow darken-2 modal-trigger" href="#modalUtiliser">Utiliser</a></span>
+                      <span class="badge"><a class="waves-effect waves-light btn black-text yellow darken-2 modal-trigger valign-wrapper" href="#modalUtiliser">Utiliser</a></span>
                       <span>Points de Fidélité : .. nombre de points </span>
                     </li>
                  
