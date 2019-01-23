@@ -59,7 +59,13 @@ function research(){
         },
         function (data)
         {
-            
+            var json = JSON.parse(data);
+            var htmlCode = "";
+            result = new Array(json.length);
+            for (var i = 0; i < json.length; i ++) {
+                htmlCode += '';
+               // sounds[i] = json[i].urlSound;
+            }
         }
     );
 }

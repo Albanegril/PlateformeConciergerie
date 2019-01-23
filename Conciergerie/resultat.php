@@ -13,27 +13,26 @@
 
   <div class="row">
     <?php
+        include('BDopen.php');
+          $sql = 'SELECT numProduitFinal,numfournisseur,nom,nomTypeProduit,originalPrice,nomCategorie,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur,imageProduit,device from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join typeproduitcategorie natural join categorie natural join volume natural join marque;';
+          $result = mysqli_query($Connect, $sql);
+          if ($result) {
 
-      $Query="SELECT numProduitFinal, FROM produitfinal";
-      $final  = $Connect->query($Query);
-
-            while ($Data = mysqli_fetch_array($final)){
-              $Query="select numfournisseur,nom,nomTypeProduit,nomCategorie,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join typeproduitcategorie natural join categorie natural join volume natural join marque;";
-              
-              $item  = $Connect->query($Query);
-          echo '
+            while($row = mysqli_fetch_assoc($result)) {
+               
+              echo '
               <div class="col l6 s12">
-                <a href="product.php?item='.$Data[0].'" class="black-text">
+                <a href="product.php?item='.$row['numProduitFinal'].'" class="black-text">
                   <div class="card horizontal waves-effect waves-light">
                     <div class="card-image">
-                      <img src="images/'.$Data[4].'">
+                      <img src="images/'.$row['imageProduit'].'">
                     </div>
                     <div class="card-stacked">
                       <div class="card-content">
-                          <h5>'.$Data[1].'</h5>
-                          <p>'.$Data[2].'</p>
-                          <p> Volume </p>
-                          <p class="red-text"> Prix</p>
+                          <h5>'.$row['nom'].'</h5>
+                          <p>'.$row['nomTypeProduit'].'</p>
+                          <p>' .$row['quantiteVolume'].' '.$row['typeVolume'].' </p>
+                          <p class="red-text">' .$row['originalPrice'].' '.$row['device'].'</p>
                       </div>
                       <div class="card-action">
                         <img id="image" src="images/vuitton.png" alt="logo marque">
@@ -44,11 +43,11 @@
                 </a>
               </div>
               '; 
-          }  
+            }}
               
     ?>
 
-    <div class="col l6 s12">
+ <!--   <div class="col l6 s12">
       <a href="product.php" class="black-text">
         <div class="card horizontal waves-effect waves-light">
           <div class="card-image">
@@ -112,7 +111,7 @@
     </div>
 
   </div>
-<!--
+
 
         <div class="col s4 m3">
           <div class="card horizontal">
@@ -184,4 +183,3 @@
       </div>
     </div>
   </div>-->       
-</div>
