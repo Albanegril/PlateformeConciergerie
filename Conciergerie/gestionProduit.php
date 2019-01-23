@@ -41,6 +41,7 @@
                     <div class="input-field inline col l6 s12">
                       Nom produit<input id="nom" type="text" class="validate" name="Nom">
                     </div>
+
        
                     <div class="input-field inline col l6 s12">
                       Lien page Produit<input id="lien" type="url" class="validate"  name="lien">
@@ -80,7 +81,7 @@
                     <div class="col l6 s12">
                         <div class="input-field">
                           <input id="illustration" name="illustration" type="text" class="validate">
-                          <label for="illustration">illustration :</label>
+                          <label for="illustration">Illustration</label>
                         </div>
                     </div>
 
@@ -93,7 +94,7 @@
                     </div>
                     <div class="input-field new badge col l3 s6"> 
                       <input id="volume" name="volume" type="text" class="validate">
-                      <label for="volume">Volume :</label>
+                      <label for="volume">Volume</label>
                     </div>
 
                   </div>
@@ -160,11 +161,15 @@
             <div class="card-panel grey lighten-5"  id="Modifier">
             <form method="post" action="traitementModifiProduit.php">
                     <div class="input-field col l6 offset-l3 s12">
-                      <select>
-                        <option value="" disabled selected>Choisir un code</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                      <select multiple id="Nom" name="Nom">
+                        <option value="" disabled selected>Choisir un Nom produit</option>
+                        <?php 
+                        $sql = "SELECT * FROM produit NATURAL JOIN produitfinal;";
+                        $result = mysqli_query($mysqli, $sql);
+                        while ($data = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <option value="<?php echo $data['numProduitFinal'];?>"><?php echo $data['nomProduit'];?></option>
+                        <?php } ?>
                       </select>
                     </div>
 
@@ -211,7 +216,7 @@
                     <div class="col l6 s12">
                         <div class="input-field">
                           <input id="illustration" name="illustration" type="text" class="validate">
-                          <label for="illustration">illustration :</label>
+                          <label for="illustration">Illustration </label>
                         </div>
                     </div>
 
@@ -224,7 +229,7 @@
                     </div>
                     <div class="input-field new badge col l3 s6"> 
                       <input id="volume" name="volume" type="text" class="validate">
-                      <label for="volume">Volume :</label>
+                      <label for="volume">Volume </label>
                     </div>
 
                   </div>
@@ -302,23 +307,34 @@
                   </div>
 
                   <div class="row">
-                    <div class="input-field col l6 s12">
-                      <select>
+                    
+                    <div class="input-field inline col l6 s12">
+                      <select multiple id="Nom" name="Nom">
                         <option value="" disabled selected>Choisir un Nom produit</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        <?php 
+                        $sql = "SELECT * FROM produit NATURAL JOIN produitfinal;";
+                        $result = mysqli_query($mysqli, $sql);
+                        while ($data = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <option value="<?php echo $data['numProduitFinal'];?>"><?php echo $data['nomProduit'];?></option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                    
+
+                    <div class="input-field inline col l6 s12">
+                      <select multiple id="Code" name="Code">
+                        <option value="" disabled selected>Choisir un Code</option>
+                        <?php 
+                        $sql = "SELECT * FROM produitfinal NATURAL JOIN produit;";
+                        $result = mysqli_query($mysqli, $sql);
+                        while ($data = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <option value="<?php echo $data['numProduitFinal'];?>"><?php echo $data['numProduit'];?></option>
+                        <?php } ?>
                       </select>
                     </div>
 
-                    <div class="input-field col l6 s12">
-                      <select>
-                        <option value="" disabled selected>Choisir un code</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
                   </div>
 
                 <div class="row">

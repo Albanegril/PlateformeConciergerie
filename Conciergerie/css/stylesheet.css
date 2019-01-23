@@ -88,14 +88,22 @@ label
   top: 20%;
   height: 100%;
   
-  margin: 0px, -10px, 0px, -10px !important; 
+  margin: 0px, -10px, 0px, -10px !important;
   
 }
 
 #Panier .card-panel
 {
-  padding: -10px, -10px, -10px, 0px !important;
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 /* (haut, droite, bas, gauche) */
 
+.ResearchSelects
+{
+	display: flex;
+	justify-content: center;
+}
