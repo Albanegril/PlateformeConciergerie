@@ -43,7 +43,7 @@
                     <img class="card-image" src="images/'.$Data[1].'">
                   </div>
 
-                  <div class="col l5 s10" >
+                  <div class="col l7 s10" >
                     <h4>'.$Data[0].'</h4>
                     <h6>code à créer </h6> 
 
@@ -68,13 +68,13 @@
                       </p>
                     </form>
 
-                    <div class="col l2 offset-l1 s6 margeTop">
+                    <div class="col l2  s6 margeTop">
                       <a href="marque.php?item='.$Data[4].'">
                         <img id="image" src="images/'.$Data[5].'" alt="logo marque">
                       </a> 
                     </div>
                       
-                    <div class="col l2 offset-l1 s6 margeTop">
+                    <div class="col l2 offset-l2 s6 margeTop">
                       <a href="fournisseur.php?item='.$Data[6].'">
                         <img id="image" src="images/'.$Data[7].'" alt="logo fournisseur">
                       </a>

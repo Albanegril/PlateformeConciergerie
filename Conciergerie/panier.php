@@ -1,4 +1,4 @@
-<div class="col l2 s10 offset-s1"  id="Panier">
+<div class="col l2 s10 offset-s1 hide-on-med-and-down"  id="Panier">
 	
 		<ul class="card-panel grey lighten-5">
 		    <li>
