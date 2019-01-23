@@ -31,37 +31,38 @@
                 </div>
               </div>
 
-              <!-- Ajouter -->
-              <div class="card-panel grey lighten-5"  id="Ajouter">
-                <form method="post" action="traitementAjoutFournisseur.php">
-                  <div class="row">
-                    <div class="input-field inline col l6 s12">
-                      Nom Fournisseur<input id="nom" type="text" class="validate" name="Nom">
-                    </div>
-       
-                    <div class="input-field inline col l6 s12">
-                      Lien page Fournisseur<input id="lien" type="url" class="validate"  name="lien">
-                    </div>
+            <!-- Ajouter -->
+            <div class="card-panel grey lighten-5"  id="Ajouter">
+              <form method="post" action="traitementAjoutFournisseur.php">
+                <div class="row">
+                  <div class="input-field inline col l6 s12">
+                    Nom Fournisseur<input id="nom" type="text" class="validate" name="Nom">
                   </div>
+     
+                  <div class="input-field inline col l6 s12">
+                    Lien page Fournisseur<input id="lien" type="url" class="validate"  name="lien">
+                  </div>
+                </div>
 
-                  <div class="col l6 s12">
-                      <div class="file-field input-field">
-                        <div class="input-field">
-                          illustration<input id="illustration" name="illustration" type="text" class="validate">
-                        </div>
-                  </div>
-                  
-                  <div class="row">
-                    <div class="col s12 right-align">
-                      <input type="submit" value="Ajouter" name="ajouter" id="ajouter" class="waves-effect waves-light btn yellow darken-2" />
+                <div class="col l6 s12">
+                    <div class="file-field input-field">
+                      <div class="input-field">
+                        illustration<input id="illustration" name="illustration" type="text" class="validate">
+                      </div>
                     </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col s12 right-align">
+                    <input type="submit" value="Ajouter" name="ajouter" id="ajouter" class="waves-effect waves-light btn yellow darken-2" />
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
 
             <!-- MODIFIER -->
             <div class="card-panel grey lighten-5"  id="Modifier">
-            <form method="post" action="traitementModifiFournisseur.php">
+              <form method="post" action="traitementModifiFournisseur.php">
                   <div class="input-field col l6 s12">
                     <select>
                       <option value="" disabled selected>Choisir un Fournisseur</option>
@@ -81,6 +82,7 @@
                         <div class="input-field">
                           illustration <input id="illustration" name="illustration" type="text" class="validate"> 
                         </div>
+                      </div>
                   </div>
                   <div class="input-field inline col l6 s12">
                     Lien page Fournisseur<input id="lien" type="url" class="validate"  name="lien">
@@ -97,8 +99,8 @@
 
             <!-- Supprimer -->
             <div class="card-panel grey lighten-5"  id="Supprimer">
-            <form method="post" action="traitementSuppFournisseur.php">
-              
+              <form method="post" action="traitementSuppFournisseur.php">
+                
                 <div class="input-field col l6 offset-l3 s12">
                   <select>
                     <option value="" disabled selected>Choisir un Fournisseur</option>
@@ -118,11 +120,12 @@
                     <input type="submit" value="Supprimer" name="supprimer" id="supprimer" class="waves-effect waves-light btn yellow darken-2" />
                   </div>
                 </div>
-              </form>
-              </div>
 
+              </form>
             </div>
-          </div>     
+
+          </div>
+            
 
       <?php include_once ("footer.php"); ?>
 

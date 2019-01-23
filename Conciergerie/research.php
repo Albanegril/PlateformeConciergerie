@@ -15,7 +15,8 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row ResearchSelects">
+
 
            <div class="input-field col l2 offset-l1 s5 offset-l1">
             <select multiple id="Type" name="Type">
@@ -60,8 +61,9 @@
       </div>
         
     
-      <div class="row">
-        <div class="col l5 offset-l1 s12">
+      <div class="row ResearchSelects"> 
+      
+        <div class="input-field col l2 offset-l1 s5 offset-l1">
           <select multiple id="Categorie" name="Categorie">
             <option value="" disabled selected>Categorie</option>
             <?php  
@@ -74,7 +76,7 @@
           </select>
         </div> 
 
-        <div class="col l5 offset-l1 s12"> 
+        <div class="input-field col l2 offset-l1 s5 offset-l1"> 
             <select>
               <option value="" disabled selected>Prix</option>
               <option value="1"> inf 10€ </option>
@@ -92,7 +94,6 @@
         </div>
 -->
       </div>
-
 
       <div class="col offset-s5">
         <input type="submit" value="Recherche" name="Recherche" id="Recherche" class="waves-effect waves-light btn yellow darken-2 black-text"" onclick="afficherproduit()"/>

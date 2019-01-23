@@ -102,8 +102,8 @@ label
 
 /* (haut, droite, bas, gauche) */
 
-.TopZero
+.ResearchSelects
 {
-	display: block;
-	align-content: center;
+	display: flex;
+	justify-content: center;
 }
