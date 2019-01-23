@@ -14,7 +14,7 @@
   <div class="row">
     <?php
         include('BDopen.php');
-          $sql = 'SELECT numProduitFinal,numfournisseur,nom,nomTypeProduit,originalPrice,nomCategorie,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur,imageProduit,device from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join typeproduitcategorie natural join categorie natural join volume natural join marque;';
+          $sql = 'SELECT numProduitFinal,numfournisseur,nom,nomTypeProduit,originalPrice,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur,imageProduit,device from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join categorie natural join volume natural join marque;';
           $result = mysqli_query($Connect, $sql);
           if ($result) {
 
@@ -46,7 +46,7 @@
             }}
               
     ?>
-
+</div>
  <!--   <div class="col l6 s12">
       <a href="product.php" class="black-text">
         <div class="card horizontal waves-effect waves-light">
