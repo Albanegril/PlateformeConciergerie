@@ -11,7 +11,9 @@
             session_start();
             if (isset($_SESSION['id'])) { ?>
               <li><a href="index.php">Recherche</a></li>
-              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Gestion Base de Données<i class="material-icons right">arrow_drop_down</i></a></li>        
+              <li><a href="gestionProduit.php">GestionProduit</a></li>
+              <li><a href="gestionFournisseur.php">GestionShop</a></li>
+              <li><a href="gestionMarque.php">GestionMarque</a></li>        
               <li><a href="compte.php">Compte</a></li>
               <li><a href="pagePanier.php"><i class="material-icons">shopping_basket</i></a></a></li>
               <li><a href="traitementDeconnexion.php" class="waves-effect waves-light  yellow darken-2">DECONNEXION</a></li>

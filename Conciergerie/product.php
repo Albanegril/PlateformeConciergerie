@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="row">
-                  <div class="col offset-l1 l10 s12">
+                  <div class="col offset-l1 l10 offset-s2 s10">
                     <table class="responsive-table">
                       <thead>
                           <tr>
@@ -143,7 +143,7 @@
                       </div>
                         
 
-                      <div class="col l8 s12">
+                      <div class="col l8 offset-s2 s10">
                         <table class="responsive-table">
                           <thead>
                               <tr>

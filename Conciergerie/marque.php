@@ -31,84 +31,55 @@
                 echo '
 
         <h4 class="titrePage">Fiche Marque : '.$Data[0].' <br> <img id="image" src="images/'.$Data[1].'" alt="logo marque"></h4>
-        <div class="row">
-
-          <div class="card-panel grey lighten-5" id="Marque" >
-            <div class="row">
-              <div class="col l6 s12">
-                <a href="product.php" class="black-text">
-                  <div class="card horizontal waves-effect waves-light">
-                    <div class="card-image">
-                      <img src="images/coco.jpg">
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content">
-                          <h5>Item 1</h5>
-                          <p>Type, Catégorie</p>
-                          <p class="red-text">Prix</p>
-                      </div>
-                      <div class="card-action">
-                        <img id="image" src="images/vuitton.png" alt="logo marque">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col l6 s12">
-                <a href="product.php" class="black-text">
-                  <div class="card horizontal waves-effect waves-light">
-                    <div class="card-image">
-                      <img src="images/coco.jpg">
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content">
-                          <h5>Item 1</h5>
-                          <p>Type, Catégorie</p>
-                          <p class="red-text">Prix</p>
-                      </div>
-                      <div class="card-action">
-                        <img id="image" src="images/vuitton.png" alt="logo marque">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col l6 s12">
-                <a href="product.php" class="black-text">
-                  <div class="card horizontal waves-effect waves-light">
-                    <div class="card-image">
-                      <img src="images/coco.jpg">
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content">
-                          <h5>Item 1</h5>
-                          <p>Type, Catégorie</p>
-                          <p class="red-text">Prix</p>
-                      </div>
-                      <div class="card-action">
-                        <img id="image" src="images/vuitton.png" alt="logo marque">
-                        <img id="image" src="images/nocibe.jpg" alt="logo fournisseur">
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="row Resultat">
 
             <div class="fixed-action-btn" id="myBtn" onclick="topFunction()">
               <a class="btn-floating btn red">
                   <i class="large material-icons">arrow_drop_up</i>
               </a>
             </div>
-          </div>
+          
           ';
+
+          $sql = "SELECT numProduitFinal,numfournisseur,nom,nomTypeProduit,originalPrice,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur,imageProduit,device from fournisseur natural join produit natural join typeproduit natural join produitfinal natural join categorie natural join volume natural join marque WHERE numMarque= '$item';";
+          $result = mysqli_query($Connect, $sql);
+          if ($result) {
+
+            while($row = mysqli_fetch_assoc($result)) {
+               
+              echo '
+              <div class="col l6 s12">
+                <a href="product.php?item='.$row['numProduitFinal'].'" class="black-text">
+                  <div class="card horizontal waves-effect waves-light">
+                    <div class="card-image">
+                      <img src="images/'.$row['imageProduit'].'">
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                          <h6>'.$row['nom'].'</h6>
+                          <p>'.$row['nomTypeProduit'].'</p>
+                          <p>' .$row['quantiteVolume'].' '.$row['typeVolume'].' </p>
+                          <p class="red-text">' .$row['originalPrice'].' '.$row['device'].'</p>
+                      </div>
+                      <div class="card-action">
+                        <img id="imageR" src="images/'.$row['imageMarque'].'" alt="logo marque">
+                        <img id="imageR" src="images/'.$row['imageFournisseur'].'" alt="logo fournisseur">
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              '; 
+            }
+          }
+
+          echo '</div>';
+
         }
-      ?>
+              
+    ?>
+</div>
+
         </div>
       <?php include_once ("footer.php"); ?>
 
