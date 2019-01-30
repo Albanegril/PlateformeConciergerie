@@ -1,8 +1,9 @@
 <?php
+include('BDopen.php');
+
 if(isset($_POST['autocomplete-input']) && !empty($_POST['autocomplete-input'])){// && isset($_POST['change']) && !empty($_POST['change']) && isset($_POST['type']) && !empty($_POST['type']) && isset($_POST['marque']) && !empty($_POST['marque']) )
   $barre = htmlentities($_POST['autocomplete-input']);
- 
-  include('BDopen.php');
+  
   $sql = 'SELECT nom,itemCode FROM produit,Marque where nom='.$barre.';';
   $result = mysqli_query($mysqli, $sql);
   $myArray = array();
@@ -20,82 +21,86 @@ else{
   echo "rien";
 }
 //TRAITEMENT RECHECHE  
-/*if(isset($_POST['Recherche'] )){
-   
-      $Autocomplet = $_POST['autocomplete-input'];
-      if($Autocomplet !=''){   // si le produit existe alors on le recupère 
-       // $Query="SELECT * FROM Jeux WHERE Nom='$Nom'";
-      //  $jeux = $Connect->query($Query);
 
+  if(isset($_POST['Recherche'] )){
+
+      $requete = "SELECT numProduitFinal,numfournisseur,nom,nomTypeProduit,originalPrice,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur,imageProduit,device FROM fournisseur NATURAL JOIN produit NATURAL JOIN typeproduit NATURAL JOIN produitfinal NATURAL JOIN categorie NATURAL JOIN volume NATURAL JOIN marque WHERE ";
+
+      if(isset($_POST['Prix']) && !empty($_POST['Prix'])){
+          $prix =$_POST['Prix'];
+          if($prix==1){
+              $requete = $requete." originalPrice<=10 ";
+          }
+          if($prix==2){
+              $requete = $requete." originalPrice>=10 AND originalPrice<=50 ";
+          }
+          if($prix==3){
+              $requete = $requete." originalPrice>=50 AND originalPrice<=100 ";
+          }
+          if($prix==4){
+              $requete = $requete." originalPrice>=100 AND originalPrice<=200 ";
+          }
+          if($prix==5){
+              $requete = $requete." originalPrice>=200 ";
+          }
       }
-      else { //regarder le reste
+      else{
+          $requete = $requete." originalPrice>=0 ";
+      }
 
-        if (isset($_POST['age'])) {
-          $age = (int)$_POST['age'];  
-        }
-        else{
-          $age = 0;
-        }
-
-        $requete = '';
-
-        if ($_POST['nombre'] != 0) {
-          $nombre = $_POST['nombre'];
-          $requete = $requete." AND NbJoueur >=$nombre";
-        }
-        else{
-          $requete = $requete." AND NbJoueur >=0";
-        }
-
-        if (isset($_POST['cartes'])) {
-          $cartes = 1;
-          $requete = $requete." AND Carte =$cartes";  
-        }
-
-        if (isset($_POST['plateau'])) {
-          $plateau = 1; 
-          $requete = $requete." AND Plateau =$plateau"; 
-        }
-
-        if (isset($_POST['ambiance'])) {
-          $ambiance = 1; 
-          $requete = $requete." AND Ambiance =$ambiance"; 
-        }
-        
-        if (isset($_POST['reflexion'])) {
-          $reflexion = 1; 
-          $requete = $requete." AND Reflexion =$reflexion"; 
-        }
-      
-        if (isset($_POST['familiale'])) {
-          $familiale = 1; 
-          $requete = $requete." AND Familial =$familiale"; 
-        }
-
-    //    $Query= "SELECT Nom, Illusration FROM Jeux WHERE AgeMin >= $age ".$requete;
-       // echo $Query;
-    //    $jeux = $Connect->query($Query);
+      if(isset($_POST['Type']) && !empty($_POST['Type'])){
+          $type =$_POST['Type'];
+          $requete = $requete." AND numTypeProduit =$ype";
+      }
+      if(isset($_POST['Marque']) && !empty($_POST['Marque'])){
+          $marque =$_POST['Marque'];
+          $requete = $requete." AND numMarque=$marque";
+      }
+      if(isset($_POST['Shop']) && !empty($_POST['Shop'])){
+          $shop =$_POST['Shop'];
+          $requete = $requete." AND numFournisseur=$shop";
+      }
+      if(isset($_POST['Categorie']) && !empty($_POST['Categorie'])){
+          $categorie =$_POST['Categorie'];
+          $requete = $requete." AND numCategorie =$categorie";
+      }
      
-      }
+        echo $requete;
+       $resultat = $Connect->query($requete);
+     
+    }
 ?>
 
 <?php
 
     // AFFICHAGE DES RESULTATS RECHECHE 
-      if (isset($jeux)) {
-          
-        while ($Data = mysqli_fetch_array($jeux)){
-
-          echo '
-              <div class="conteneur ">
-                <form method="post" class="formulaire" id="jeu">
-                  <a href="jeu.php?$jeu='.$Data[0].'"><img src="image/'.$Data[1].'" class="illusration" width="200px"></a>
-                    <a href="jeu.php?$jeu='.$Data[0].'"><h3> '.$Data[0].' </h3></a>
-                    <em class="'.siDispo($Data[0]).'">Dispo</em> <br/>
-                    <br/><a href="reserver.php?jeu='.$Data[0].'" class="btn">RESERVER</a>
-                  </form>
-              </div>
-          ';
-        }*/
         
+        if (isset($result)){
+
+          while($row = mysqli_fetch_assoc($result)) {
+             
+            echo '
+            <div class="col l6 s12">
+              <a href="product.php?item='.$row['numProduitFinal'].'" class="black-text">
+                <div class="card horizontal waves-effect waves-light">
+                  <div class="card-image">
+                    <img src="images/'.$row['imageProduit'].'">
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        <h6>'.$row['nom'].'</h6>
+                        <p>'.$row['nomTypeProduit'].'</p>
+                        <p>' .$row['quantiteVolume'].' '.$row['typeVolume'].' </p>
+                        <p class="red-text">' .$row['originalPrice'].' '.$row['device'].'</p>
+                    </div>
+                    <div class="card-action">
+                      <img id="imageR" src="images/'.$row['imageMarque'].'" alt="logo marque">
+                      <img id="imageR" src="images/'.$row['imageFournisseur'].'" alt="logo fournisseur">
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            '; 
+          }}    
 ?>

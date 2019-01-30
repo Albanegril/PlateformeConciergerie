@@ -1,5 +1,4 @@
 <h4 class="titrePage">Formulaire</h4>
-
 <div id="Formulaire" class="card-panel grey lighten-5">
   <div class="row">
     <form  method="post" action="traitementRecherche.php">
@@ -16,7 +15,6 @@
       </div>
 
       <div class="row ResearchSelects">
-
 
            <div class="input-field col l2 offset-l1 s5 offset-l1">
             <select multiple id="Type" name="Type">
@@ -71,8 +69,10 @@
               $result = mysqli_query($mysqli, $sql);
               while ($data = mysqli_fetch_assoc($result)) {
             ?>
-            <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
-            <?php } ?>
+              <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
+            <?php 
+              } 
+            ?>
           </select>
         </div> 
 
@@ -82,8 +82,8 @@
               <option value="1"> inf 10€ </option>
               <option value="2"> de 10€ à 50€ </option>
               <option value="3"> de 50€ à 100€</option>
-              <option value="3"> de 100€ à 200€</option>
-              <option value="3"> sup 200€</option>
+              <option value="4"> de 100€ à 200€</option>
+              <option value="5"> sup 200€</option>
             </select>
         </div>      
 
