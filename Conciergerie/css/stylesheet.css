@@ -19,6 +19,8 @@ footer
 	position: relative;
     right: 0;
     left: 0;
+
+    z-index: 0;
 }
 
 label
@@ -95,6 +97,8 @@ label
   height: 100%;
   
   margin: 0px, -10px, 0px, -10px !important;
+
+  z-index: 1;
   
 }
 
