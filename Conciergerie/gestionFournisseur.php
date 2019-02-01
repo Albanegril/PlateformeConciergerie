@@ -69,7 +69,7 @@
                       <?php 
                       include('BDopen.php');
                       $sql = "SELECT * FROM fournisseur;";
-                      $result = mysqli_query($mysqli, $sql);
+                      $result = mysqli_query($Connect, $sql);
                       while ($data = mysqli_fetch_assoc($result)) {
                       ?>
                       <option value="<?php echo $data['numFournisseur'];?>"><?php echo $data['nomFournisseur'];?></option>
@@ -107,7 +107,7 @@
                     <?php 
                     include('BDopen.php');
                     $sql = "SELECT * FROM fournisseur;";
-                    $result = mysqli_query($mysqli, $sql);
+                    $result = mysqli_query($Connect, $sql);
                     while ($data = mysqli_fetch_assoc($result)) {
                     ?>
                     <option value="<?php echo $data['numFournisseur'];?>"><?php echo $data['nomFournisseur'];?></option>

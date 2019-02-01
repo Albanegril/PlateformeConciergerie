@@ -73,7 +73,7 @@
                       <option value="" disabled selected>Choisir une Marque</option>
                       <?php                         
                       $sql = "SELECT * FROM marque;";
-                      $result = mysqli_query($mysqli, $sql);
+                      $result = mysqli_query($Connect, $sql);
                       while ($data = mysqli_fetch_assoc($result)) {
                       ?>
                       <option value="<?php echo $data['numMarque'];?>"><?php echo $data['nomMarque'];?></option>
@@ -112,7 +112,7 @@
                     <option value="" disabled selected>Choisir une Marque</option>
                     <?php                         
                     $sql = "SELECT * FROM marque;";
-                    $result = mysqli_query($mysqli, $sql);
+                    $result = mysqli_query($Connect, $sql);
                     while ($data = mysqli_fetch_assoc($result)) {
                     ?>
                     <option value="<?php echo $data['numMarque'];?>"><?php echo $data['nomMarque'];?></option>

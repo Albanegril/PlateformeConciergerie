@@ -21,7 +21,7 @@
               <option value="" disabled selected>Type</option>
               <?php 
               $sql = "SELECT * FROM typeproduit;";
-              $result = mysqli_query($mysqli, $sql);
+              $result = mysqli_query($Connect, $sql);
               while ($data = mysqli_fetch_assoc($result)) {
               ?>
               <option value="<?php echo $data['numTypeProduit'];?>"><?php echo $data['nomTypeProduit'];?></option>
@@ -35,7 +35,7 @@
               <option value="" disabled selected>Marque</option>
               <?php 
               $sql = "SELECT * FROM marque;";
-              $result = mysqli_query($mysqli, $sql);
+              $result = mysqli_query($Connect, $sql);
               while ($data = mysqli_fetch_assoc($result)) {
               ?>
               <option value="<?php echo $data['numMarque'];?>"><?php echo $data['nomMarque'];?></option>
@@ -48,7 +48,7 @@
               <option value="" disabled selected>Shop</option>
               <?php 
               $sql = "SELECT * FROM fournisseur;";
-              $result = mysqli_query($mysqli, $sql);
+              $result = mysqli_query($Connect, $sql);
               while ($data = mysqli_fetch_assoc($result)) {
               ?>
               <option value="<?php echo $data['numFournisseur'];?>"><?php echo $data['nomFournisseur'];?></option>
@@ -61,12 +61,12 @@
     
       <div class="row ResearchSelects"> 
       
-        <div class="input-field col l2 offset-l1 s5 offset-l1">
+        <div class="input-field col l3 s5 offset-l1">
           <select multiple id="Categorie" name="Categorie">
             <option value="" disabled selected>Categorie</option>
             <?php  
               $sql = "SELECT * FROM categorie;";
-              $result = mysqli_query($mysqli, $sql);
+              $result = mysqli_query($Connect, $sql);
               while ($data = mysqli_fetch_assoc($result)) {
             ?>
               <option value="<?php echo $data['numCategorie'];?>"><?php echo $data['nomCategorie'];?></option>
@@ -76,7 +76,7 @@
           </select>
         </div> 
 
-        <div class="input-field col l2 offset-l1 s5 offset-l1"> 
+        <div class="input-field col l3 offset-l1 s5 offset-l1"> 
             <select>
               <option value="" disabled selected>Prix</option>
               <option value="1"> inf 10€ </option>
