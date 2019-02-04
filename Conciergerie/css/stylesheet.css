@@ -37,12 +37,7 @@ label
 
 #Connexion
 {
-	background-image: url(../images/fondAutre_v1.png);
-	background-position: center center;
-
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: 100%;
+	margin-right: 100px !important;
 }
 
 .titrePage

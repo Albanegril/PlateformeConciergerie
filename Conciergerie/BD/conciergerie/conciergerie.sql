@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 04 fév. 2019 à 19:15
+-- Généré le :  lun. 04 fév. 2019 à 23:23
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `categorie` (
   `numCategorie` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `nomCategorie` varchar(20) NOT NULL,
   PRIMARY KEY (`numCategorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `categorie`
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `adresse` varchar(20) NOT NULL,
   `numClient` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`numClient`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `client`
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `commande` (
   `etat` int(1) NOT NULL,
   `montant` double NOT NULL,
   PRIMARY KEY (`numCommande`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `concierge` (
   `password` varchar(20) NOT NULL,
   PRIMARY KEY (`numConcierge`),
   UNIQUE KEY `login` (`login`,`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `concierge`
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `fournisseur` (
   `URLFournisseur` varchar(50) NOT NULL,
   `imageFournisseur` varchar(50) NOT NULL,
   PRIMARY KEY (`numFournisseur`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `fournisseur`
@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `marque` (
   `codeMarque` varchar(10) NOT NULL,
   `imageMarque` varchar(20) NOT NULL,
   PRIMARY KEY (`numMarque`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `marque`
@@ -191,17 +191,17 @@ INSERT INTO `marque` (`numMarque`, `nomMarque`, `URLMarque`, `codeMarque`, `imag
 DROP TABLE IF EXISTS `produit`;
 CREATE TABLE IF NOT EXISTS `produit` (
   `numProduit` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `nom` varchar(30) CHARACTER SET utf8 NOT NULL,
-  `device` varchar(10) CHARACTER SET utf8 NOT NULL,
-  `produitsInclus` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `nom` varchar(30) NOT NULL,
+  `device` varchar(10) NOT NULL,
+  `produitsInclus` varchar(100) NOT NULL,
   `numMarque` int(10) UNSIGNED NOT NULL,
   `numTypeProduit` int(10) UNSIGNED NOT NULL,
-  `URLProduit` varchar(20) CHARACTER SET utf8 NOT NULL,
-  `imageProduit` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `URLProduit` varchar(20) NOT NULL,
+  `imageProduit` varchar(20) NOT NULL,
   PRIMARY KEY (`numProduit`),
   KEY `numMarque` (`numMarque`),
   KEY `numTypeProduit` (`numTypeProduit`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `produit`
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
 
 INSERT INTO `produit` (`numProduit`, `nom`, `device`, `produitsInclus`, `numMarque`, `numTypeProduit`, `URLProduit`, `imageProduit`) VALUES
 (1, 'bloom', '&euro;', 'guilty', 1, 1, '', 'bloom.png'),
-(2, 'La nuit du Trésor', '&dollar;', '3 échantillons par commande', 2, 1, '', 'lanuit.png'),
+(2, 'La nuit du Tresor', '&dollar;', '3 echantillons par commande', 2, 1, '', 'lanuit.png'),
 (3, 'Bronze and glow powder', '&euro;', '', 2, 2, '', 'bronze.png');
 
 -- --------------------------------------------------------
@@ -232,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `produitfinal` (
   KEY `numFournisseur` (`numFournisseur`,`numVolume`,`numProduit`),
   KEY `numVolume` (`numVolume`),
   KEY `numProduit` (`numProduit`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `produitfinal`
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `tabledechange` (
   `coAeuros` double NOT NULL,
   `numtabledechange` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`numtabledechange`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `typeproduit` (
   `nomTypeProduit` varchar(20) NOT NULL,
   `codeTypeProduit` varchar(10) NOT NULL,
   PRIMARY KEY (`numTypeProduit`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `typeproduit`
@@ -298,7 +298,7 @@ CREATE TABLE IF NOT EXISTS `typeproduitcategorie` (
   PRIMARY KEY (`numTC`),
   KEY `numTypeProduit` (`numTypeProduit`,`numCategorie`),
   KEY `numCategorie` (`numCategorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `typeproduitcategorie`
@@ -323,7 +323,7 @@ CREATE TABLE IF NOT EXISTS `volume` (
   `typeVolume` varchar(10) NOT NULL,
   `quantiteVolume` int(10) NOT NULL,
   PRIMARY KEY (`numVolume`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `volume`
