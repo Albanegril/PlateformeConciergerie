@@ -18,13 +18,14 @@ if(isset($_POST['autocomplete-input']) && !empty($_POST['autocomplete-input'])){
       }
 }
 else{
-  echo "rien";
+ // echo "rien";
 }
+
 //TRAITEMENT RECHECHE  
 
   if(isset($_POST['Recherche'] )){
 
-      $requete = "SELECT numProduitFinal,numfournisseur,nom,nomTypeProduit,originalPrice,quantiteVolume,typeVolume,originalPrice,imageMarque,imageFournisseur,imageProduit,device FROM fournisseur NATURAL JOIN produit NATURAL JOIN typeproduit NATURAL JOIN produitfinal NATURAL JOIN categorie NATURAL JOIN volume NATURAL JOIN marque WHERE ";
+      $requete = "SELECT numProduitFinal, numfournisseur, nom, nomTypeProduit, originalPrice, quantiteVolume, typeVolume, originalPrice, imageMarque, imageFournisseur, imageProduit, device FROM fournisseur NATURAL JOIN produit NATURAL JOIN typeproduit NATURAL JOIN produitfinal NATURAL JOIN categorie NATURAL JOIN volume NATURAL JOIN marque WHERE ";
 
       if(isset($_POST['Prix']) && !empty($_POST['Prix'])){
           $prix =$_POST['Prix'];
@@ -50,7 +51,7 @@ else{
 
       if(isset($_POST['Type']) && !empty($_POST['Type'])){
           $type =$_POST['Type'];
-          $requete = $requete." AND numTypeProduit =$ype";
+          $requete = $requete." AND numTypeProduit =$type";
       }
       if(isset($_POST['Marque']) && !empty($_POST['Marque'])){
           $marque =$_POST['Marque'];
@@ -65,17 +66,31 @@ else{
           $requete = $requete." AND numCategorie =$categorie";
       }
      
-        echo $requete;
+       // echo $requete;
        $resultat = $Connect->query($requete);
      
     }
-?>
 
-<?php
 
     // AFFICHAGE DES RESULTATS RECHECHE 
         
         if (isset($result)){
+          echo'
+            <div id="Resultat" class="card-panel grey lighten-5">
+              <div class="row">
+                <form>
+                  <div class="input-field col s3 offset-s8">
+                    <select>
+                      <option value="" disabled selected>Ordre</option>
+                      <option value="1">Par prix</option>
+                      <option value="2">Par pertinence</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+
+              <div class="row Resultat">
+            ';  
 
           while($row = mysqli_fetch_assoc($result)) {
              
@@ -102,5 +117,9 @@ else{
               </a>
             </div>
             '; 
-          }}    
+          }
+          echo'
+            </div>
+            ';
+        }    
 ?>

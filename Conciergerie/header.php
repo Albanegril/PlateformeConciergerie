@@ -10,6 +10,7 @@
             <?php 
             session_start();
             if (isset($_SESSION['id'])) { ?>
+              <li><a href="liste.php">Stock</a></li>
               <li><a href="index.php">Recherche</a></li>
               <li><a href="gestionProduit.php">GestionProduit</a></li>
               <li><a href="gestionFournisseur.php">GestionShop</a></li>
@@ -30,6 +31,7 @@
         <?php 
         
         if (isset($_SESSION['id'])) { ?>
+          <li><a href="liste.php">Stock</a></li>
           <li><a href="index.php">Recherche</a></li>
           <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Gestion Base de Données<i class="material-icons right">arrow_drop_down</i></a></li>        
           <li><a href="compte.php">Compte</a></li>

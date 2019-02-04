@@ -1,7 +1,7 @@
-<h4 class="titrePage">Formulaire</h4>
+<h4 class="titrePage">Formulaire Recherche</h4>
 <div id="Formulaire" class="card-panel grey lighten-5">
   <div class="row">
-    <form  method="post" action="traitementRecherche.php">
+    <form  method="post" action="research.php">
       <div class="row">
         <div class="col l6 offset-l3 s10 offset-s1">
 
@@ -100,7 +100,7 @@
       </div>
 
     </form>
+
   </div>
 </div>
-
 
